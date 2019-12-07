@@ -36,7 +36,11 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+
+#Android Build
 *.apk
+*.aab
+*.keystore
 
 # Unity3D generated file on crash reports
 sysinfo.txt
