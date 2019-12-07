@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MENU PRINCIPALE.unity
+    guid: 50437861d8c3dd243b668a71676e07a6
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/ENIGMA CANDELE.unity
+    guid: e26b8b20797dbdb4e9448141e7dcbcdd
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/ENIGMA SENTINELLE.unity
+    guid: 25e80bfb344a41b449f0b6641bc0a63a
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/ENIGMA POZIONI.unity
+    guid: 23a8d9779804d3c4e8616fbd66f0740c
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/Recinto.unity
+    guid: 5d82166d2b4880e418c2fffc55acd0b7
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/ENIGMA 120.unity
+    guid: 15b1315fb33f94c4290c84057e39f8b8
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/ENIGMA ORECCHINI.unity
+    guid: 885335d02f9ab1644a2ed7e7035bf8ca
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/Torce.unity
+    guid: bd7880db212e26b4e93002f064945283
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/Carrello.unity
+    guid: bebada4a95cd0054c8291b0824dde8fe
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/Gemme.unity
+    guid: e220f99d983ae6b45b29030c96f665cc
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/Miniera.unity
+    guid: eb517003cb3868c4281fc722412ee94e
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/ENIGMA LUCCHETTO.unity
+    guid: 65de892693386c147be138b1500fdcab
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/ENIGMA PERIMETRO.unity
+    guid: 3b5d789cfd13b304a98667f268278713
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/ENIGMA CAVALLI.unity
+    guid: 265002a8909365d4aaa147c2a0936cbb
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/Stelle.unity
+    guid: f6cac77404a198144b7eca26de8d7294
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/MADALINA/ENIGMA CHIAVI.unity
+    guid: 2ae64980eca1d204da8ed0c03ec9f5f0
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Biglie.unity
+    guid: c6fc5addc24348a40ac356b92745c22d
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Orologio.unity
+    guid: ff60ad606cf75a14dbd9747310a59e9e
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Spada e Fodero.unity
+    guid: c521674ec7c11e2429ee1c465d2be391
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Ampolla.unity
+    guid: ef7e4fbed3cf216488b3d83f92c1b8a2
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Bott Vino.unity
+    guid: 91d6657b63fda4d4284c71935ddfafc1
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Bilancia.unity
+    guid: 89f34f9a6fcb2964d97253297e73520c
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Equazione.unity
+    guid: 86c9b180c43d8c94192420ada2b8e93e
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/RGB.unity
+    guid: d2b8eec4e7e1105448004cc9f8e2df5b
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Mele.unity
+    guid: e7f2132e7f20c2f43b0da38ef9c23a15
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Terreno.unity
+    guid: da1a643e492a0c7479aba07f05f96017
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/GameBoy.unity
+    guid: 9e73bd9c2ff872d4ab7e4e87d1d78e20
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Scatola.unity
+    guid: 136e45f1650320d408de0ecf1270a946
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Dadi.unity
+    guid: 4ebc2bb225fcdd143b448d233d319d3e
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Pergamena.unity
+    guid: 972d594582f780341bd9e0a9bc36e923
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/DARK KNIGHT/Bandiera.unity
+    guid: 0c0346e06acf1bd4ebb9fe39f35ca9b0
+  - enabled: 1
+    path: Assets/Scenes/MENU ENIGMA.unity
+    guid: 07fae27b054c3cc4bb5739dd91fd657e
+  - enabled: 1
+    path: Assets/Scenes/Video Scene/RISPOSTA_ESATTA.unity
+    guid: 71dcf4a2ac8312341b2cd1cd91eb1d9e
+  - enabled: 1
+    path: Assets/Scenes/Video Scene/RISPOSTA_SBAGLIATA.unity
+    guid: 2b8c7624153689348b933d3aabc45b44
+  - enabled: 1
+    path: Assets/Scenes/TUTORIAL.unity
+    guid: 6a4f6875a9355e047a7b79bbb044e21d
+  - enabled: 1
+    path: Assets/Scenes/Video Scene/TRASFORMAZIONE INIZIO.unity
+    guid: e9427ea290ba3694db06d3acf45cda52
+  - enabled: 1
+    path: Assets/Scenes/Video Scene/TRASFORMAZIONE FINALE.unity
+    guid: e197aa5d5d37e124999446cc86eabafe
+  - enabled: 1
+    path: Assets/Scenes/Video Scene/END DK.unity
+    guid: a9c0eaa2d21cd0e419a6073bf06de810
+  m_configObjects: {}

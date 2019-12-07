@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 3162a8c0f59304a4ca4ed55f77c628e3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mixer: {instanceID: 0}
+  - musicSource: {instanceID: 0}
+  - effectsSource: {instanceID: 0}
+  - money: {instanceID: 0}
+  - click: {instanceID: 0}
+  - feedOrLock: {instanceID: 0}
+  - ignite: {instanceID: 0}
+  - gold: {instanceID: 0}
+  - laugh: {instanceID: 0}
+  - ironWheel: {instanceID: 0}
+  - magic: {instanceID: 0}
+  - unlock: {instanceID: 0}
+  - clickIn: {fileID: 8300000, guid: 40c40b551c7d18643bb74b3b3e1cfee2, type: 3}
+  - ClickOut: {fileID: 8300000, guid: 89b7708015e48d24f99ffb7addec5e1f, type: 3}
+  - Bip: {fileID: 8300000, guid: 32f0181e0dde49940810aadf1b50cdc4, type: 3}
+  - startSong: {instanceID: 0}
+  - enigmaSong: {instanceID: 0}
+  - solutionSong: {instanceID: 0}
+  - menuSong: {instanceID: 0}
+  - trasformationSong: {instanceID: 0}
+  - darkSong: {instanceID: 0}
+  - bogNil: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

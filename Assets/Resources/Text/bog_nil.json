@@ -1,0 +1,18 @@
+[
+{
+  "character": "BG",
+  "textITA": "La soluzione e' 56. Bravissimo!",
+  "textENG":  "The solution is 56. Good Job!"
+},
+
+{
+  "character": "NL",
+  "textITA": "Bog! Sei un idiota. Non tocca ancora a noi.",
+  "textENG":  "Bog! You are an idiot. It is not our turn yet."
+},
+{
+  "character": "BG",
+  "textITA": "Oddio Nil! Scusami. Mi sono confuso..",
+  "textENG":  "Oh! Sorry Nil. I'm confused."
+}
+]

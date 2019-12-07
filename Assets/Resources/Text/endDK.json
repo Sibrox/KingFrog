@@ -1,0 +1,31 @@
+[
+{
+  "character": "DK",
+  "textITA": "Oh perbacco! Sei stato un valido avversario.",
+  "textENG":  "Oh Damn! Yuo was a good opponent."
+},
+
+{
+  "character": "DK",
+  "textITA": "Adesso e' ora di ritornare al mio castello. Meglio non farmi trovare qui quando Madalina mi cerchera'.",
+  "textENG":  "Now it's time to go back to the castle. I don't want to stay here when she'll come to see me."
+},
+
+{
+  "character": "MD",
+  "textITA": "...",
+  "textENG":  "..."
+},
+
+{
+  "character": "MD",
+  "textITA": "Dannazione! Sono costretta a chiamare quei due goblin.",
+  "textENG":  "Damn. I have to summon the two goblin."
+},
+
+{
+  "character": "MD",
+  "textITA": "Ma che fine hanno fatto? Quando servono non ci sono mai.",
+  "textENG":  "Where are they? I need their help."
+}
+]
