@@ -26,6 +26,13 @@ public class Check : MonoBehaviour
         if(int.Parse(left.GetComponent<Text>().text) == left_int 
         && int.Parse(middle.GetComponent<Text>().text) == middle_int 
         && int.Parse(right.GetComponent<Text>().text) == right_int){
+            //Achivement "First steps"
+            if(GameManager.instance.indexEnigma == 1)
+            {
+                Debug.Log("Unlocking achivement...");
+                GooglePlayServices.instance.UnlockFirstStep(GooglePlayServices.ACHIVEMENT.FIRST_STEP);
+            }
+
             GameManager.instance.LoadSceneByIndex(GameManager.instance.indexRight);
         }
         else{

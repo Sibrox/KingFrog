@@ -12,12 +12,30 @@ using UnityEngine.SocialPlatforms;
 //for text, remove
 using UnityEngine.UI;
 
-public class GooglePlayServices
+public class GooglePlayServices : MonoBehaviour
 {
+
+    public enum ACHIVEMENT
+    {
+        FIRST_STEP
+    }
 
     public static GooglePlayServices instance;
 
-    public static void Authentication()
+    public bool authenticated;
+
+    public void Awake()
+    {
+        TestSingleton();
+    }
+
+    private void Start()
+    {
+        Authentication();
+        authenticated = false;
+    }
+
+    public  void Authentication()
     {
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
         .Build();
@@ -29,21 +47,44 @@ public class GooglePlayServices
             if (success)
             {
                 Debug.Log("logged");
+                authenticated = true;
             }
             else
             {
                 Debug.Log("Not Logged");
+                authenticated = false;
             }
         });
     }
 
 
 
-    public void UnlockFirstStep()
+    public void UnlockFirstStep(ACHIVEMENT achivement)
     {
-        Social.ReportProgress("CgkIzqblrPINEAIQAg", 100.0f, (bool success) => {
-            // handle success or failure
-        });
+        if (!authenticated)
+        {
+            Debug.Log("Not connected on Play Services.");
+            return;
+        }
+
+        switch (achivement)
+        {
+            case ACHIVEMENT.FIRST_STEP:
+                Social.ReportProgress("CgkIzqblrPINEAIQAg", 100.0f, (bool success) => {
+                    // handle success or failure
+                    if (success)
+                    {
+
+                    }
+                    else
+                    {
+                        Debug.Log("Not succeded");
+                    }
+                });
+                break;
+        }
+
+
     }
 
     public void SaveToCloud()
@@ -79,6 +120,14 @@ public class GooglePlayServices
             Debug.LogWarning("Error reading game: " + status);
         }
         */
+    }
+
+
+    public void TestSingleton()
+    {
+        if (instance != null) Destroy(gameObject);
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
 }
