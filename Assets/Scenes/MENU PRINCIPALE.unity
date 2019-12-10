@@ -1776,7 +1776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaystore: 1
-  isTestAd: 1
+  isTestAd: 0
 --- !u!4 &1317556209
 Transform:
   m_ObjectHideFlags: 0

@@ -206,17 +206,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enigma
       objectReference: {fileID: 0}
-    - target: {fileID: 1943468940418972719, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+    - target: {fileID: 395952275973999997, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1485787635}
-    - target: {fileID: 822598198074875627, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8836e7dd2fd94b84e92429b6ea6e4ba4,
-        type: 3}
+      propertyPath: isActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1943468940418972714, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -255,7 +249,7 @@ PrefabInstance:
     - target: {fileID: 1943468940418972714, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1943468940418972714, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
@@ -322,6 +316,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1943468940418972719, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1485787635}
     - target: {fileID: 5652505399188386129, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: nEnigma
@@ -330,83 +329,7 @@ PrefabInstance:
     - target: {fileID: 7025951607789185449, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5241726627933995454, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: m_Text
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: continueButton
-      value: 
-      objectReference: {fileID: 1509364381}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: textDisplay
-      value: 
-      objectReference: {fileID: 1509364382}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: sentencesGood1ITA.Array.data[0]
-      value: Per mille rane!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: sentencesGood1ITA.Array.data[1]
-      value: Per la bava di un troll!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: sentencesGood1ITA.Array.data[3]
-      value: Che mi venga un colpo... della strega!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: sentencesGood2ITA.Array.data[1]
-      value: ' Questa volta mi hai sconfitto,'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: sentencesGood2ITA.Array.data[2]
-      value: ' Sei piu'' intelligente di quanto pensassi,'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: sentencesGood2ITA.Array.data[3]
-      value: ' Non sono riuscita a ingannarti,'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: sentencesGood3ITA.Array.data[0]
-      value: ' ma ricorda, ride bene chi ride ultimo.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: sentencesGood3ITA.Array.data[2]
-      value: ' sara'' stata sicuramente fortuna.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: sentencesGood3ITA.Array.data[3]
-      value: ' se continui cosi'', non potro'' permettermi la Limbus.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: textITA
-      value: "Un mago sbadato ha dovuto lasciare in fretta la sua torre per una chiamata
-        urgente del re. Su una pergamena ha lasciato un messaggio per il suo apprendista:
-        \u201CRaggiungimi al castello. Mi raccomando, non dimenticare di portare con
-        te la pozione 13!\u201D. Aiuta l\u2019apprendista a prendere la pozione giusta. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: textENG
-      value: 'A careless wizard had to leave his tower in haste for an urgent call
-        from the king. On a parchment, he left a message for his apprentice: "Reach
-        me at the castle. Please don''t forget to bring potion 13 with you! " Help
-        the apprentice take the right potion.'
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9008737729168138002, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
@@ -483,20 +406,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 822598198074875627, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8836e7dd2fd94b84e92429b6ea6e4ba4,
+        type: 3}
     - target: {fileID: 1195990247174077775, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 395952275973999997, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: isActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8057846105127019186, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241726627933995454, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_Text
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 358298303416344505, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
@@ -596,17 +525,6 @@ PrefabInstance:
       propertyPath: hasText
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7127023698838757314, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a6b31bb4d5d9c944c97c99823d25b99f,
-        type: 3}
-    - target: {fileID: 6143075620937486408, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: character
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6725104660212505812, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_Enabled
@@ -638,12 +556,82 @@ PrefabInstance:
       propertyPath: hasText
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8779218772471042409, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
-      propertyPath: m_Sprite
+      propertyPath: continueButton
       value: 
-      objectReference: {fileID: 21300000, guid: 5441e99faf8e20f4dbb337342ec4f4d2,
+      objectReference: {fileID: 1509364381}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
+      propertyPath: textDisplay
+      value: 
+      objectReference: {fileID: 1509364382}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood1ITA.Array.data[0]
+      value: Per mille rane!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood1ITA.Array.data[1]
+      value: Per la bava di un troll!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood1ITA.Array.data[3]
+      value: Che mi venga un colpo... della strega!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood2ITA.Array.data[1]
+      value: ' Questa volta mi hai sconfitto,'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood2ITA.Array.data[2]
+      value: ' Sei piu'' intelligente di quanto pensassi,'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood2ITA.Array.data[3]
+      value: ' Non sono riuscita a ingannarti,'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood3ITA.Array.data[0]
+      value: ' ma ricorda, ride bene chi ride ultimo.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood3ITA.Array.data[2]
+      value: ' sara'' stata sicuramente fortuna.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood3ITA.Array.data[3]
+      value: ' se continui cosi'', non potro'' permettermi la Limbus.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: textITA
+      value: "Un mago sbadato ha dovuto lasciare in fretta la sua torre per una chiamata
+        urgente del re. Su una pergamena ha lasciato un messaggio per il suo apprendista:
+        \u201CRaggiungimi al castello. Mi raccomando, non dimenticare di portare con
+        te la pozione 13!\u201D. Aiuta l\u2019apprendista a prendere la pozione giusta. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: textENG
+      value: 'A careless wizard had to leave his tower in haste for an urgent call
+        from the king. On a parchment, he left a message for his apprentice: "Reach
+        me at the castle. Please don''t forget to bring potion 13 with you! " Help
+        the apprentice take the right potion.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143075620937486408, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: character
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5486904026974434836, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_Text
@@ -651,6 +639,23 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8779218772471042409, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5441e99faf8e20f4dbb337342ec4f4d2,
+        type: 3}
+    - target: {fileID: 3641860294775766534, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127023698838757314, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a6b31bb4d5d9c944c97c99823d25b99f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfcc4d61e5b31284d9e81096a8bf26be, type: 3}
 --- !u!1 &1509364381 stripped
@@ -671,69 +676,3 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2136802647
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2136802650}
-  - component: {fileID: 2136802649}
-  - component: {fileID: 2136802648}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2136802648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136802647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &2136802649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136802647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &2136802650
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136802647}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.04044342}
-  m_LocalScale: {x: 0.9995506, y: 0.9995506, z: 0.9995506}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

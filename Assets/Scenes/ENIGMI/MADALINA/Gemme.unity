@@ -526,12 +526,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enigma
       objectReference: {fileID: 0}
-    - target: {fileID: 822598198074875627, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+    - target: {fileID: 395952275973999997, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8763ba8639d819b4bb2eb19cf3c946c7,
-        type: 3}
+      propertyPath: isActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1943468940418972714, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -650,19 +649,8 @@ PrefabInstance:
     - target: {fileID: 7025951607789185449, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6143075620937486408, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: character
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779218772471042409, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5441e99faf8e20f4dbb337342ec4f4d2,
-        type: 3}
     - target: {fileID: 9008737729168138002, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -728,20 +716,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 822598198074875627, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8763ba8639d819b4bb2eb19cf3c946c7,
+        type: 3}
     - target: {fileID: 1195990247174077775, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 395952275973999997, guid: bfcc4d61e5b31284d9e81096a8bf26be,
-        type: 3}
-      propertyPath: isActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8057846105127019186, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241726627933995454, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_Text
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 358298303416344505, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
@@ -892,6 +886,48 @@ PrefabInstance:
       propertyPath: hasText
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood1ITA.Array.data[0]
+      value: Per mille rane!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood1ITA.Array.data[3]
+      value: Che mi venga un colpo... della strega!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood2ITA.Array.data[2]
+      value: ' Mi hai battuto,'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451146118042382165, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: sentencesGood2ITA.Array.data[3]
+      value: ' Non sono riuscita a sconfiggerti,'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143075620937486408, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: character
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779218772471042409, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5441e99faf8e20f4dbb337342ec4f4d2,
+        type: 3}
+    - target: {fileID: 3641860294775766534, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127023698838757314, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a6b31bb4d5d9c944c97c99823d25b99f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfcc4d61e5b31284d9e81096a8bf26be, type: 3}
 --- !u!224 &1013878857 stripped

@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ENIGMI/MADALINA/ENIGMA SENTINELLE.unity
     guid: 25e80bfb344a41b449f0b6641bc0a63a
   - enabled: 1
-    path: Assets/Scenes/ENIGMI/MADALINA/ENIGMA POZIONI.unity
+    path: Assets/Scenes/ENIGMI/MADALINA/Pozioni.unity
     guid: 23a8d9779804d3c4e8616fbd66f0740c
   - enabled: 1
     path: Assets/Scenes/ENIGMI/MADALINA/Recinto.unity

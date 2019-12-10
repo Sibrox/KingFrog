@@ -381,7 +381,7 @@
 {
 "number": 28 ,
 "name": "DADI",
-"text_ita": "Mettendo i fila questi dadi e' possibile generare una precisa successione. Quale delle quattro possibili disposizioni continua questa sequenza?",
+"text_ita": "Mettendo in fila questi dadi e' possibile generare una precisa successione. Quale delle quattro possibili disposizioni continua questa sequenza?",
 "text_eng": "By putting these dices together, it is possible to generate a precise sequence. Which of the four possible arrangements continues this sequence?",
 "hint1_ita": "E' possibile individuare una precisa sequenza di numeri, sei in grado di trovarla?",
 "hint2_ita": "Guarda solamente i pallini neri nella parte alta dei dadi, non serve vedere il dado nel suo insieme.",
@@ -409,7 +409,7 @@
 {
 "number": 30 ,
 "name": "BANDIERA",
-"text_ita": "Il capo di una piccola tribu' ha deciso di creare uno stendardo che caratterizzi il suo clan. Dividendo lo stendardo in tre parti di grandezza non variabile, quanti tipi diversi di stendardi e' possibile ottenere utilizzando 3 tinture? Ogni zona deve essere di un solo colore. Inoltre non possono esserci 2 colori vicini.",
+"text_ita": "Il capo di una piccola tribu' ha deciso di creare uno stendardo che caratterizzi il suo clan. Dividendo lo stendardo in tre parti di grandezza non variabile, quanti tipi diversi di stendardi e' possibile ottenere utilizzando 3 tinture? Ogni zona deve essere di un solo colore. Inoltre non possono esserci 2 colori uguali vicini.",
 "text_eng": "The head of a small has decided to create a banner that characterizes his clan. By dividing the banner into three sections, of variable size, how many different types of banners can be obtained using 3 colors if each zone can have a different color, without there being more than 2 adjacent ones?",
 "hint1_ita": "Non serve provare con tutti i colori, basta trovare il numero di combinazioni con un colore e poi moltiplicarle per il numero di colori totali.",
 "hint2_ita": "Anche il bianco e' un colore della bandiera.",
