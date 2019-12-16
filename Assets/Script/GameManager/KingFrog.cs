@@ -30,5 +30,12 @@ namespace KingFrog
         DIALOG,
         END
     }
+
+    public enum MENU_STATUS
+    {
+        STORY,
+        EVENTS,
+        MARKET
+    }
 }
 

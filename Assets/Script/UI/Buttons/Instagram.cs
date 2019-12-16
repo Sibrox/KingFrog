@@ -21,4 +21,9 @@ public class Instagram : MonoBehaviour
         Application.OpenURL("https://www.instagram.com/sibroxcompany/");
     }
 
+    public void OpenFacebook()
+    {
+        Application.OpenURL("https://www.facebook.com/Sibrox-Co-101061278057087/");
+    }
+
 }

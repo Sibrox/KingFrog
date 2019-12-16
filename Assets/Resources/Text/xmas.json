@@ -1,0 +1,31 @@
+[
+{
+  "character": "DK",
+  "textITA": "Dannazione! Con questa neve non posso tornare a casa.",
+  "textENG":  "Ehehehe! Finally, this journey seemed unending."
+},
+
+{
+  "character": "MD",
+  "textITA": "Ehehehe! Il Natale si sta avvicinando.",
+  "textENG":  "It took you some time to get here."
+},
+
+{
+  "character": "MD",
+  "textITA": "Dovrai rimanere qui per un bel po' prima che il tempo si ristabilisca.",
+  "textENG":  "It took you some time to get here."
+},
+
+{
+  "character": "DK",
+  "textITA": "E' l'occasione buona per farmi perdonare, ho giusto un asso nella manica da mostare al nostro amico.",
+  "textENG":  "I've got lost a couple of times, the streets here all look the same."
+},
+
+{
+  "character": "MD",
+  "textITA": "Allora non ti sei arreso! Ti do una mano, facciamogli ricordare questo Natale.",
+  "textENG":  "It took you some time to get here."
+}
+]

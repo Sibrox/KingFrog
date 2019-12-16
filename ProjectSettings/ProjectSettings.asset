@@ -245,7 +245,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Dave/Progetti/Unity/Sibrox Games/KFR/kingfrog.keystore
+  AndroidKeystoreName: C:/Users/dgall/Desktop/kingfrog.keystore
   AndroidKeyaliasName: kingfrog
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1

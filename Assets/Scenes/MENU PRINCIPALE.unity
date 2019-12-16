@@ -1631,6 +1631,11 @@ PrefabInstance:
       propertyPath: indexEndDarkKnight
       value: 37
       objectReference: {fileID: 0}
+    - target: {fileID: 10340901512831847, guid: 80402cda50e325f4aa1ea5c55ec61b8d,
+        type: 3}
+      propertyPath: xMasScene
+      value: 38
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80402cda50e325f4aa1ea5c55ec61b8d, type: 3}
 --- !u!1 &1280606739

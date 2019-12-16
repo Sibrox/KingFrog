@@ -119,4 +119,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Video Scene/END DK.unity
     guid: a9c0eaa2d21cd0e419a6073bf06de810
+  - enabled: 1
+    path: Assets/Scenes/Video Scene/Bufera.unity
+    guid: d4fcfbf530a5c3c45a0696c0e1e5eb36
   m_configObjects: {}

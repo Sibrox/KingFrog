@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
-
+using KingFrog;
 public class GameManager : MonoBehaviour
 {
     public Language.LANG lang;
@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [Space(10)]
     public int indexStatus,indexEnigma,lastSolved;
     public int indexMenu,indexStart,indexTutorial,indexLittleFrog,indexBigFrog,indexEndDarkKnight;
+    public int xMasScene;
 
     public int indexRight, indexWrong;
     public bool rightCheck, checking;
@@ -35,6 +36,8 @@ public class GameManager : MonoBehaviour
     public bool saving;
 
     public bool darkKnightStarted;
+
+    public MENU_STATUS menu_status;
 
     private void Awake()
     {
@@ -249,6 +252,11 @@ public class GameManager : MonoBehaviour
     public void OpenInstagram()
     {
         Application.OpenURL("https://www.instagram.com/sibroxcompany/");
+    }
+
+    public void LoadBufera()
+    {
+        LoadSceneByIndex(xMasScene);
     }
 
 }

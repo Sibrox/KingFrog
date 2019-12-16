@@ -322,7 +322,7 @@ PrefabInstance:
     - target: {fileID: 10340901512831847, guid: 80402cda50e325f4aa1ea5c55ec61b8d,
         type: 3}
       propertyPath: lang
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10340901512831847, guid: 80402cda50e325f4aa1ea5c55ec61b8d,
         type: 3}
@@ -474,6 +474,11 @@ MonoBehaviour:
   laugh: {fileID: 8300000, guid: 67dac42f40ce9844693aeba35f47b168, type: 3}
   ironWheel: {fileID: 8300000, guid: 2d78b5f1a42174c4f8d0360e46087295, type: 3}
   magic: {fileID: 8300000, guid: 0c50086e6f2600343bd687b91b077272, type: 3}
+  unlock: {fileID: 0}
+  click2: {fileID: 0}
+  click2in: {fileID: 0}
+  click2out: {fileID: 0}
+  bip: {fileID: 0}
   SONGS: 0
   startSong: {fileID: 8300000, guid: 48fdbbe36001c7346b457dd7e4767c48, type: 3}
   enigmaSong: {fileID: 8300000, guid: a7cf16ddaef92694cbc806fd4408ec24, type: 3}
@@ -481,6 +486,7 @@ MonoBehaviour:
   menuSong: {fileID: 8300000, guid: d690fc44817fb984d960b2ff90dd2a2c, type: 3}
   trasformationSong: {fileID: 0}
   darkSong: {fileID: 0}
+  bogNil: {fileID: 0}
 --- !u!4 &1364828402
 Transform:
   m_ObjectHideFlags: 0
