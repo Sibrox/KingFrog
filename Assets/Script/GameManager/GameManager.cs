@@ -82,16 +82,22 @@ public class GameManager : MonoBehaviour
             StartCoroutine(CoroutineLoad(indexBigFrog));
             checking = false;
             rightCheck = false;
-            lastSolved = 15;
-            gameData.lastSolved = lastSolved;
+            if (lastSolved <= 15)
+            {
+                lastSolved = 15;
+                gameData.lastSolved = lastSolved;
+            }
         }
         else if (checking && rightCheck && indexEnigma == 30)
         {
             StartCoroutine(CoroutineLoad(indexEndDarkKnight));
             checking = false;
             rightCheck = false;
-            lastSolved = 30;
-            gameData.lastSolved = lastSolved;
+            if (lastSolved <= 30)
+            {
+                lastSolved = 30;
+                gameData.lastSolved = lastSolved;
+            }
         }
         else
         {
