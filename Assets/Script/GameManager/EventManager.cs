@@ -13,6 +13,8 @@ public class EventManager : MonoBehaviour
 
     public GameObject menuScenari, mainMenu, eventMenu;
 
+    public int indexXmas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,12 @@ public class EventManager : MonoBehaviour
         StartCoroutine(LoadScene(nameScene));
     }
 
+    public void LoadScenebyIndx(int indexScene)
+    {
+        StartCoroutine(LoadSceneByIndex(indexScene));
+    }
+
+
     public IEnumerator LoadScene(string nameScene)
     {
         var loading = SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
@@ -42,11 +50,28 @@ public class EventManager : MonoBehaviour
     }
 
 
+    public IEnumerator LoadSceneByIndex(int indexScene)
+    {
+        var loading = SceneManager.LoadSceneAsync(indexScene, LoadSceneMode.Additive);
+        yield return loading;
+
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(indexScene));
+        var closing = SceneManager.UnloadSceneAsync(GameManager.instance.indexStatus);
+        yield return closing;
+
+        GameManager.instance.indexStatus = indexScene;
+    }
+
 
     public void StartStory()
     {
 
     }
 
+
+    public void StartXmas()
+    {
+        LoadSceneByIndex(indexXmas);
+    }
 
 }
