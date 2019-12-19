@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
     [Header("SAVE DATA")]
     public GameSaved gameSaveData;
 
+    public TextRiddle[] xMasRiddle;
+
     private void Awake()
     {
         TestSingleton();
@@ -59,7 +61,7 @@ public class GameManager : MonoBehaviour
         nHint = -1;
         enteredEnigma = new bool[30];
 
-        //GooglePlayServices.Authentication();
+        GooglePlayServices.Authentication();
 
         for(int  i = 0; i<30; i++)
         {
@@ -67,6 +69,10 @@ public class GameManager : MonoBehaviour
         }
         TextAsset jsonTextFile = Resources.Load<TextAsset>("Text/Riddles");
         riddles = JsonHelper.getJsonArray<TextRiddle>(jsonTextFile.ToString());
+
+        TextAsset jsonTextFileXmas = Resources.Load<TextAsset>("Text/RiddlesXMas");
+        xMasRiddle = JsonHelper.getJsonArray<TextRiddle>(jsonTextFileXmas.ToString());
+
     }
 
     // Update is called once per frame

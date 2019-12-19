@@ -17,9 +17,9 @@ public class GooglePlayServices
 
     public static GooglePlayServices instance;
 
-    public string _saveName = "kingfrog_cloud_saving";
+    public static string _saveName = "kingfrog_cloud_saving";
 
-    private bool Authenticated
+    private static bool Authenticated
     {
         get
         {
@@ -49,7 +49,7 @@ public class GooglePlayServices
     }
 
     //QUESTO METODO APRE IL METADATA PER IL SALVATAGGIO, SUBITO DOPO RICHIAMA SaveGameOpened()
-    public void SaveToCloud()
+    public static void SaveToCloud()
     {
 
         if (Authenticated)
@@ -70,7 +70,7 @@ public class GooglePlayServices
     }
 
     //METODO PER IL LOAD DAL CLOUD DEL SALVATAGGIO
-    public void LoadFromCloud()
+    public static void LoadFromCloud()
     {
         Debug.Log("Loading game progress from the cloud.");
         ((PlayGamesPlatform)Social.Active).SavedGame.OpenWithAutomaticConflictResolution(
@@ -81,7 +81,7 @@ public class GooglePlayServices
     }
 
     //METODO RICHIAMATO DOPO L'APERTURA DEL METADATA DA SOVRASCRIVERE
-    private void LoadGameAfterOpen(SavedGameRequestStatus status, ISavedGameMetadata game)
+    private static void LoadGameAfterOpen(SavedGameRequestStatus status, ISavedGameMetadata game)
     {
         //check success
         if (status == SavedGameRequestStatus.Success)
@@ -97,7 +97,7 @@ public class GooglePlayServices
         }
     }
 
-    private void SavedGameLoaded(SavedGameRequestStatus status, byte[] data)
+    private static void SavedGameLoaded(SavedGameRequestStatus status, byte[] data)
     {
         if (status == SavedGameRequestStatus.Success)
         {
@@ -114,7 +114,7 @@ public class GooglePlayServices
     }
 
     //QUESTA FUNZIONE VIENE CHIAMATA QUANDO IL GIOCO VIENE APERTO E SI VUOLE SALVARE NEL CLOUD
-    private void SavedGameOpened(SavedGameRequestStatus status, ISavedGameMetadata game)
+    private static void SavedGameOpened(SavedGameRequestStatus status, ISavedGameMetadata game)
     {
         //check success
         if (status == SavedGameRequestStatus.Success)
@@ -131,7 +131,7 @@ public class GooglePlayServices
     }
 
     //QUESTA FUNZIONE VIENE CHIAMATA DOPO IL COMMIT SUL CLOUD DEL SALVATAGGIO
-    private void SavedGameWritten(SavedGameRequestStatus status, ISavedGameMetadata game)
+    private static void SavedGameWritten(SavedGameRequestStatus status, ISavedGameMetadata game)
     {
         if (status == SavedGameRequestStatus.Success)
         {
@@ -144,21 +144,21 @@ public class GooglePlayServices
     }
 
     //return saveString as bytes
-    private byte[] ToBytes(string text)
+    private static byte[] ToBytes(string text)
     {
         byte[] bytes = Encoding.UTF8.GetBytes(text);
         return bytes;
     }
 
     //take bytes as arg and return string
-    private string FromBytes(byte[] bytes)
+    private static string FromBytes(byte[] bytes)
     {
         string decodedString = Encoding.UTF8.GetString(bytes);
         return decodedString;
     }
 
 
-    public void UnlockFirstStep()
+    public static void UnlockFirstStep()
     {
         Social.ReportProgress("CgkIzqblrPINEAIQAg", 100.0f, (bool success) => {
             // handle success or failure
