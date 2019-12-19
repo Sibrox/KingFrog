@@ -109,7 +109,14 @@ public class GameManager : MonoBehaviour
 
     public void LoadSceneByIndex(int indexScene)
     {
-        StartCoroutine(CoroutineLoad(indexScene));
+        if (menu_status == MENU_STATUS.XMAS)
+        {
+            StartCoroutine(CoroutineLoadXMas(indexScene));
+        }
+        else
+        {
+            StartCoroutine(CoroutineLoad(indexScene));
+        }
     }
 
     IEnumerator CoroutineLoad(int indexScene)
@@ -265,5 +272,59 @@ public class GameManager : MonoBehaviour
     public void OpenInstagram()
     {
         Application.OpenURL("https://www.instagram.com/sibroxcompany/");
+    }
+
+    IEnumerator CoroutineLoadXMas(int indexScene)
+    {
+        //Aswer to Riddle
+        if (indexScene == GameManager.instance.indexRight || indexScene == GameManager.instance.indexWrong)
+        {
+            if (indexScene == GameManager.instance.indexRight)
+            {
+
+                GameManager.instance.rightCheck = true;
+            }
+            else
+            {
+                GameManager.instance.rightCheck = false;
+            }
+            GameManager.instance.checking = true;
+            MixerAudio.instance.StopMusic();
+        }
+
+        var loading = SceneManager.LoadSceneAsync(indexScene, LoadSceneMode.Additive);
+        yield return loading;
+
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(indexScene));
+        var closing = SceneManager.UnloadSceneAsync(GameManager.instance.indexStatus);
+        yield return closing;
+
+
+        // It's a Riddle
+        if (indexScene >= 38 && indexScene <= 41)
+        {
+
+            if (indexScene != GameManager.instance.indexEnigma) GameManager.instance.nHint = -1;
+
+            if (GameManager.instance.checking)
+            {
+                if (GameManager.instance.rightCheck)
+                {
+                    MixerAudio.instance.ChangeSong(MixerAudio.SONG_TYPE.SOLUTION, 1);
+                    gameSaveData.events[indexScene - 38].solved[0] = true;
+                }
+                else
+                {
+                    MixerAudio.instance.ChangeSong(MixerAudio.SONG_TYPE.ENIGMA, 1);
+                }
+            }
+            else
+            {
+                MixerAudio.instance.ChangeSong(MixerAudio.SONG_TYPE.ENIGMA, 1);
+            }
+            GameManager.instance.indexEnigma = indexScene;
+        }
+        
+        GameManager.instance.indexStatus = indexScene;
     }
 }

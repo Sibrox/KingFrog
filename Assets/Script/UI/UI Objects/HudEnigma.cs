@@ -36,8 +36,10 @@ public class HudEnigma : MonoBehaviour
     {
         if (dialogComponent.GetComponent<DialogBox>().status != DialogBox.STATUS.TUTORIAL)
         {
+
             riddle = GameManager.instance.riddles[nEnigma - 1];
-            Debug.Log(riddle.text_ita);
+
+            //Debug.Log(riddle.text_ita);
             if (GameManager.instance.enteredEnigma[nEnigma - 1]
                 && !GameManager.instance.checking)
             {

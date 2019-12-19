@@ -17,7 +17,9 @@ public class StartWhenAnimationEnd : MonoBehaviour
     {
         MixerAudio.instance.PlayEffects(MixerAudio.EFFECTS_TYPE.MAGIC, 0);
         MixerAudio.instance.ChangeSong(MixerAudio.SONG_TYPE.TRANSFORMATION, 1);
+
     }
+
 
     IEnumerator Wait()
     {

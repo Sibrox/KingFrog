@@ -29,7 +29,7 @@ public class Check : MonoBehaviour
             GameManager.instance.LoadSceneByIndex(GameManager.instance.indexRight);
         }
         else{
-            GameManager.instance.LoadSceneByIndex(GameManager.instance.indexWrong);
+             GameManager.instance.LoadSceneByIndex(GameManager.instance.indexWrong);
         }
     }
 }

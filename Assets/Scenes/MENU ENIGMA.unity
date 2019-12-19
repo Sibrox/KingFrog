@@ -3422,7 +3422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 169.28775, y: -45.896683}
+  m_AnchoredPosition: {x: 169.29, y: -48.3}
   m_SizeDelta: {x: 24, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &300634953
@@ -6365,6 +6365,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd25a031116b6444975b60f48ffbaf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &479181996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479181997}
+  m_Layer: 0
+  m_Name: XMasManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479181997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479181996}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2590.8608}
+  m_LocalScale: {x: 28.78734, y: 28.78734, z: 28.78734}
+  m_Children: []
+  m_Father: {fileID: 614990154}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481178935
 GameObject:
   m_ObjectHideFlags: 0
@@ -8562,6 +8592,7 @@ RectTransform:
   - {fileID: 1060082956}
   - {fileID: 841059185}
   - {fileID: 1826433686}
+  - {fileID: 479181997}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10884,6 +10915,7 @@ GameObject:
   - component: {fileID: 924840106}
   - component: {fileID: 924840105}
   - component: {fileID: 924840104}
+  - component: {fileID: 924840108}
   m_Layer: 5
   m_Name: Xmas text button
   m_TagString: Untagged
@@ -10982,6 +11014,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924840102}
   m_CullTransparentMesh: 0
+--- !u!95 &924840108
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924840102}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e64b82d98504af944aaa6a1bcb2e3bdd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &928370530
 GameObject:
   m_ObjectHideFlags: 0
@@ -17321,7 +17372,7 @@ Animator:
   m_GameObject: {fileID: 1416898861}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6755ea8833066ff4a962bc44e3846e82, type: 2}
+  m_Controller: {fileID: 9100000, guid: e64b82d98504af944aaa6a1bcb2e3bdd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -26631,6 +26682,7 @@ MonoBehaviour:
   - {fileID: 481178941}
   solved: 
   dialogUnlock: {fileID: 4437575307248908628}
+  xMasRiddle: []
 --- !u!1 &1902289998
 GameObject:
   m_ObjectHideFlags: 0
@@ -31210,6 +31262,7 @@ GameObject:
   - component: {fileID: 2119123728}
   - component: {fileID: 2119123727}
   - component: {fileID: 2119123726}
+  - component: {fileID: 2119123730}
   m_Layer: 5
   m_Name: nSolvedXmas
   m_TagString: Untagged
@@ -31308,6 +31361,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119123724}
   m_CullTransparentMesh: 0
+--- !u!95 &2119123730
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119123724}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e64b82d98504af944aaa6a1bcb2e3bdd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2134999057
 PrefabInstance:
   m_ObjectHideFlags: 0

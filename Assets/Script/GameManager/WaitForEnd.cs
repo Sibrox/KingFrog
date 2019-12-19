@@ -34,6 +34,7 @@ public class WaitForEnd : MonoBehaviour
 
     public void EndVideo(VideoPlayer vp)
     { 
-        GameManager.instance.LoadSceneByIndex(GameManager.instance.indexEnigma);
+
+         GameManager.instance.LoadSceneByIndex(GameManager.instance.indexEnigma);
     }
 }

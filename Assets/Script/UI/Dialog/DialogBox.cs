@@ -116,6 +116,8 @@ public class DialogBox : MonoBehaviour
         }
     }
 
+    
+
     private void InitDialog()
     {
         index = 0;
