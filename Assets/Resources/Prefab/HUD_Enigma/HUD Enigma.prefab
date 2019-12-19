@@ -637,50 +637,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!1 &4544378546906490152
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8657895121589032160}
-  - component: {fileID: 6975951143496374926}
-  m_Layer: 5
-  m_Name: Elements
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8657895121589032160
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4544378546906490152}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5396024033635452888}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50.5, y: 0}
-  m_SizeDelta: {x: 395, y: 272}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6975951143496374926
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4544378546906490152}
-  m_CullTransparentMesh: 0
 --- !u!1 &4978311821884395574
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,7 +741,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5396024033635452888}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -862,7 +818,7 @@ RectTransform:
   - {fileID: 8904998450671053468}
   - {fileID: 2821843111446821469}
   m_Father: {fileID: 5396024033635452888}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -912,7 +868,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6180314554541732457}
-  - {fileID: 8657895121589032160}
   - {fileID: 4080565559770865254}
   - {fileID: 4824043905579872419}
   m_Father: {fileID: 5899081580734540001}
@@ -1591,6 +1546,51 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
+        type: 3}
+      propertyPath: textHint1_ITA
+      value: testo hint 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
+        type: 3}
+      propertyPath: textHint2_ITA
+      value: testo hint 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
+        type: 3}
+      propertyPath: textHint3_ITA
+      value: testo hint 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
+        type: 3}
+      propertyPath: textHint1_ENG
+      value: text hint 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
+        type: 3}
+      propertyPath: textHint2_ENG
+      value: text hint 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
+        type: 3}
+      propertyPath: textHint3_ENG
+      value: text hint 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
+        type: 3}
+      propertyPath: adsTextENG
+      value: Watch a video to unlock the hint!
+      objectReference: {fileID: 0}
+    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
+        type: 3}
+      propertyPath: adsTextITA
+      value: Guarda un video per sbloccare il suggerimento!
+      objectReference: {fileID: 0}
+    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
+        type: 3}
+      propertyPath: adsTextENGprev
+      value: You have to active the previous hint before this.
+      objectReference: {fileID: 0}
     - target: {fileID: 4272155716563974068, guid: 9612406df7a25be41b7d2a7081f80607,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1696,51 +1696,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
-        type: 3}
-      propertyPath: textHint1_ITA
-      value: testo hint 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
-        type: 3}
-      propertyPath: textHint2_ITA
-      value: testo hint 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
-        type: 3}
-      propertyPath: textHint3_ITA
-      value: testo hint 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
-        type: 3}
-      propertyPath: textHint1_ENG
-      value: text hint 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
-        type: 3}
-      propertyPath: textHint2_ENG
-      value: text hint 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
-        type: 3}
-      propertyPath: textHint3_ENG
-      value: text hint 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
-        type: 3}
-      propertyPath: adsTextENG
-      value: Watch a video to unlock the hint!
-      objectReference: {fileID: 0}
-    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
-        type: 3}
-      propertyPath: adsTextITA
-      value: Guarda un video per sbloccare il suggerimento!
-      objectReference: {fileID: 0}
-    - target: {fileID: 573823213956151884, guid: 9612406df7a25be41b7d2a7081f80607,
-        type: 3}
-      propertyPath: adsTextENGprev
-      value: You have to active the previous hint before this.
-      objectReference: {fileID: 0}
     - target: {fileID: 7495071042781624755, guid: 9612406df7a25be41b7d2a7081f80607,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1767,6 +1722,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5899081580734540001}
     m_Modifications:
+    - target: {fileID: 3837913356220320849, guid: d040d1537444e9a43a4830d21605889c,
+        type: 3}
+      propertyPath: m_Name
+      value: ShowEnigma
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837913356220320849, guid: d040d1537444e9a43a4830d21605889c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5361676672475699995, guid: d040d1537444e9a43a4830d21605889c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1871,16 +1836,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3837913356220320849, guid: d040d1537444e9a43a4830d21605889c,
-        type: 3}
-      propertyPath: m_Name
-      value: ShowEnigma
-      objectReference: {fileID: 0}
-    - target: {fileID: 3837913356220320849, guid: d040d1537444e9a43a4830d21605889c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d040d1537444e9a43a4830d21605889c, type: 3}
@@ -2033,6 +1988,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5899081580734540001}
     m_Modifications:
+    - target: {fileID: 1874854919944132151, guid: 56ef388e8a22b314da5c39d67dd2bae7,
+        type: 3}
+      propertyPath: m_Name
+      value: Dialog Component
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874854919944132151, guid: 56ef388e8a22b314da5c39d67dd2bae7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1874854919944132144, guid: 56ef388e8a22b314da5c39d67dd2bae7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2138,16 +2103,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1874854919944132151, guid: 56ef388e8a22b314da5c39d67dd2bae7,
-        type: 3}
-      propertyPath: m_Name
-      value: Dialog Component
-      objectReference: {fileID: 0}
-    - target: {fileID: 1874854919944132151, guid: 56ef388e8a22b314da5c39d67dd2bae7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3468827096251912395, guid: 56ef388e8a22b314da5c39d67dd2bae7,
         type: 3}
       propertyPath: status
@@ -2175,15 +2130,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56ef388e8a22b314da5c39d67dd2bae7, type: 3}
---- !u!1 &8897326669522115748 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1874854919944132151, guid: 56ef388e8a22b314da5c39d67dd2bae7,
-    type: 3}
-  m_PrefabInstance: {fileID: 7024900643929213587}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8897326669522115747 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1874854919944132144, guid: 56ef388e8a22b314da5c39d67dd2bae7,
+    type: 3}
+  m_PrefabInstance: {fileID: 7024900643929213587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8897326669522115748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1874854919944132151, guid: 56ef388e8a22b314da5c39d67dd2bae7,
     type: 3}
   m_PrefabInstance: {fileID: 7024900643929213587}
   m_PrefabAsset: {fileID: 0}
