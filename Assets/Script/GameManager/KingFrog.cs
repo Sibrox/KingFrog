@@ -39,11 +39,5 @@ namespace KingFrog
         XMAS,
         MENU
     }
-    public enum COLOR
-    {
-        BLUE,
-        RED,
-        GREEN
-    }
 }
 
