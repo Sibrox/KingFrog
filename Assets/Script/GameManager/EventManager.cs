@@ -16,9 +16,16 @@ public class EventManager : MonoBehaviour
     int nSolved;
     List<bool> solved;
 
+    public GameObject playServiceDebug;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (GameManager.instance.migrationDone)
+        {
+            playServiceDebug.SetActive(true);
+        }
+
         Dictionary<string,Event> events = new Dictionary<string, Event>();
         foreach (Event e in GameManager.instance.gameSaveData.events)
         {

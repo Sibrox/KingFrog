@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
 
     public TextRiddle[] xMasRiddle;
 
+    public bool migrationDone;
+
     private void Awake()
     {
         TestSingleton();
@@ -52,6 +54,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        migrationDone = false;
+
         darkKnightStarted = true;
         indexStatus = indexStart;
         Input.multiTouchEnabled = false;
@@ -248,13 +252,7 @@ public class GameManager : MonoBehaviour
     public void LoadGame()
     {
         gameData = SaveSystem.LoadData();
-        gameSaveData = SaveSystem.LoadDataJson();
-        if (gameData == null &&  gameSaveData == null) 
-        {
-            gameSaveData = new GameSaved();
-            firstRun = true;
-        }
-        else if(gameData != null && gameSaveData == null) // NEED MIGRATION
+        if (gameData != null) // NEED MIGRATION
         {
             lastSolved = gameData.lastSolved;
             nWrongs = gameData.nWrongs;
@@ -265,14 +263,32 @@ public class GameManager : MonoBehaviour
 
             //TODO: ELIMINARE VECCHIO SALVATAGGIO
             SaveSystem.DeleteDeprecatedSaving();
+
+            migrationDone = true;
         }
         else
         {
-            lastSolved = gameSaveData.lastSolved;
-            nWrongs = gameSaveData.nWrongs;
-            indexEnigma = lastSolved;
-            darkKnightStarted = gameSaveData.darkKnightStarted;
+            gameSaveData = SaveSystem.LoadDataJson();
+            if (gameSaveData == null)
+            {
+                GooglePlayServices.LoadFromCloud();
+            }
+
+            if (gameSaveData == null)
+            {
+                gameSaveData = new GameSaved();
+                firstRun = true;
+            }
+            else
+            {
+                lastSolved = gameSaveData.lastSolved;
+                nWrongs = gameSaveData.nWrongs;
+                indexEnigma = lastSolved;
+                darkKnightStarted = gameSaveData.darkKnightStarted;
+            }
         }
+
+        GooglePlayServices.SaveToCloud();
     }
 
     public void OpenInstagram()
@@ -333,4 +349,6 @@ public class GameManager : MonoBehaviour
         
         GameManager.instance.indexStatus = indexScene;
     }
+
+
 }

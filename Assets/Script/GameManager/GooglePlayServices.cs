@@ -72,12 +72,15 @@ public class GooglePlayServices
     //METODO PER IL LOAD DAL CLOUD DEL SALVATAGGIO
     public static void LoadFromCloud()
     {
-        Debug.Log("Loading game progress from the cloud.");
-        ((PlayGamesPlatform)Social.Active).SavedGame.OpenWithAutomaticConflictResolution(
-            _saveName, //name of file.
-            DataSource.ReadCacheOrNetwork,
-            ConflictResolutionStrategy.UseLongestPlaytime,
-            LoadGameAfterOpen);
+        if (Authenticated)
+        {
+            Debug.Log("Loading game progress from the cloud.");
+            ((PlayGamesPlatform)Social.Active).SavedGame.OpenWithAutomaticConflictResolution(
+                _saveName, //name of file.
+                DataSource.ReadCacheOrNetwork,
+                ConflictResolutionStrategy.UseLongestPlaytime,
+                LoadGameAfterOpen);
+        }
     }
 
     //METODO RICHIAMATO DOPO L'APERTURA DEL METADATA DA SOVRASCRIVERE
@@ -86,12 +89,11 @@ public class GooglePlayServices
         //check success
         if (status == SavedGameRequestStatus.Success)
         {
-            //read bytes from save
-            byte[] data = ToBytes(GameManager.instance.gameSaveData.ToString());
             //create builder. here you can add play time, time created etc for UI.
             SavedGameMetadataUpdate.Builder builder = new SavedGameMetadataUpdate.Builder();
             SavedGameMetadataUpdate updatedMetadata = builder.Build();
-            //saving to cloud
+
+            //Load from cloud
             ((PlayGamesPlatform)Social.Active).SavedGame.ReadBinaryData(game, SavedGameLoaded);
             //loading
         }
