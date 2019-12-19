@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class XMasManager : MonoBehaviour
@@ -14,7 +15,7 @@ public class XMasManager : MonoBehaviour
 
     public GameObject dialogUnlock;
 
-    public TextRiddle[] xMasRiddle;
+
 
     private void Awake()
     {
@@ -49,8 +50,6 @@ public class XMasManager : MonoBehaviour
 
         if (events["XMAS 2019"].unlocked) dialogUnlock.SetActive(false);
 
-        TextAsset jsonTextFileXmas = Resources.Load<TextAsset>("Text/RiddlesXMas");
-        xMasRiddle = JsonHelper.getJsonArray<TextRiddle>(jsonTextFileXmas.ToString());
 
         UpdateGold();
     }
@@ -68,9 +67,9 @@ public class XMasManager : MonoBehaviour
 
         for(int j = 0; j < i; j++)
         {
-            buttons[i].SetGold();
+            buttons[j].SetGold();
         }
 
-        if (i < 4) buttons[i].MakeGold();
+        if (i < 4) buttons[i].gameObject.GetComponent<Button>().interactable = true;
     }
 }

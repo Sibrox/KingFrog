@@ -43,6 +43,10 @@ public class GameManager : MonoBehaviour
     [Header("SAVE DATA")]
     public GameSaved gameSaveData;
 
+    public TextRiddle[] xMasRiddle;
+
+    public bool migrationDone;
+
     private void Awake()
     {
         TestSingleton();
@@ -50,6 +54,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        migrationDone = false;
+
         darkKnightStarted = true;
         indexStatus = indexStart;
         Input.multiTouchEnabled = false;
@@ -59,7 +65,7 @@ public class GameManager : MonoBehaviour
         nHint = -1;
         enteredEnigma = new bool[30];
 
-        //GooglePlayServices.Authentication();
+        GooglePlayServices.Authentication();
 
         for(int  i = 0; i<30; i++)
         {
@@ -67,6 +73,10 @@ public class GameManager : MonoBehaviour
         }
         TextAsset jsonTextFile = Resources.Load<TextAsset>("Text/Riddles");
         riddles = JsonHelper.getJsonArray<TextRiddle>(jsonTextFile.ToString());
+
+        TextAsset jsonTextFileXmas = Resources.Load<TextAsset>("Text/RiddlesXMas");
+        xMasRiddle = JsonHelper.getJsonArray<TextRiddle>(jsonTextFileXmas.ToString());
+
     }
 
     // Update is called once per frame
@@ -242,13 +252,7 @@ public class GameManager : MonoBehaviour
     public void LoadGame()
     {
         gameData = SaveSystem.LoadData();
-        gameSaveData = SaveSystem.LoadDataJson();
-        if (gameData == null &&  gameSaveData == null) 
-        {
-            gameSaveData = new GameSaved();
-            firstRun = true;
-        }
-        else if(gameData != null && gameSaveData == null) // NEED MIGRATION
+        if (gameData != null) // NEED MIGRATION
         {
             lastSolved = gameData.lastSolved;
             nWrongs = gameData.nWrongs;
@@ -259,14 +263,32 @@ public class GameManager : MonoBehaviour
 
             //TODO: ELIMINARE VECCHIO SALVATAGGIO
             SaveSystem.DeleteDeprecatedSaving();
+
+            migrationDone = true;
         }
         else
         {
-            lastSolved = gameSaveData.lastSolved;
-            nWrongs = gameSaveData.nWrongs;
-            indexEnigma = lastSolved;
-            darkKnightStarted = gameSaveData.darkKnightStarted;
+            gameSaveData = SaveSystem.LoadDataJson();
+            if (gameSaveData == null)
+            {
+                GooglePlayServices.LoadFromCloud();
+            }
+
+            if (gameSaveData == null)
+            {
+                gameSaveData = new GameSaved();
+                firstRun = true;
+            }
+            else
+            {
+                lastSolved = gameSaveData.lastSolved;
+                nWrongs = gameSaveData.nWrongs;
+                indexEnigma = lastSolved;
+                darkKnightStarted = gameSaveData.darkKnightStarted;
+            }
         }
+
+        GooglePlayServices.SaveToCloud();
     }
 
     public void OpenInstagram()
@@ -327,4 +349,6 @@ public class GameManager : MonoBehaviour
         
         GameManager.instance.indexStatus = indexScene;
     }
+
+
 }
