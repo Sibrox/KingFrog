@@ -6,7 +6,7 @@
         [SerializeField]
         Animator animator;
         [SerializeField]
-        Text message;
+        Text message = null;
         [SerializeField]
         Image image;
         [SerializeField]

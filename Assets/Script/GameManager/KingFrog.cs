@@ -35,7 +35,9 @@ namespace KingFrog
     {
         STORY,
         EVENTS,
-        MARKET
+        MARKET,
+        XMAS,
+        MENU
     }
 }
 

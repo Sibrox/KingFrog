@@ -2,22 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [System.Serializable]
-public class Event
-{
-    public string name { get; set; }
-    public List<bool> solved { get; set; }
-    public bool unlocked { get; set; }
-}
-
 public class GameSaved
 {
-    public string lang { get; set; }
-    public int lastSolved { get; set; }
-    public int nWrongs { get; set; }
-    public bool darkKnightStarted { get; set; }
-    public List<Event> events { get; set; }
+    public string lang;
+    public int lastSolved;
+    public int nWrongs;
+    public bool darkKnightStarted;
+    public List<Event> events;
+    public List<Extra> extras;
 
     public GameSaved()
     {
@@ -26,16 +19,36 @@ public class GameSaved
         nWrongs = 0;
         darkKnightStarted = false;
 
-    }
+        //EVENTO NATALIZIO
+        Event xmasEvent = new Event();
+        xmasEvent.name = "XMAS 2019";
+        xmasEvent.solved = new List<bool>();
+        for (int i = 0; i < 4; i++)
+        {
+            xmasEvent.solved.Add(false);
+        }
+        xmasEvent.unlocked = false;
 
-    public static GameSaved MigrateSaving(SaveData save)
-    {
-        GameSaved newSaved;
+        events = new List<Event>();
+        events.Add(xmasEvent);
 
-
-        return newSaved;
-
+        extras = new List<Extra>();
     }
 }
 
+[System.Serializable]
+public class Event
+{
+    public string name;
+    public List<bool> solved;
+    public bool unlocked;
+}
+
+public class Extra
+{
+    public string ID;
+    public string _string;
+    public int integer;
+    public bool _bool;
+}
 

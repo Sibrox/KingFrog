@@ -6,7 +6,8 @@ public class GenericDrag : MonoBehaviour
 {
     public bool dragging,draggable;
 
-    public bool camera;
+
+    public new bool camera;
     // Start is called before the first frame update
     void Start()
     {

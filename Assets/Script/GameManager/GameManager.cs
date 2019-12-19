@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
 
     public MENU_STATUS menu_status;
 
+    //NEW INFO
+    [Header("SAVE DATA")]
+    public GameSaved gameSaveData;
+
     private void Awake()
     {
         TestSingleton();
@@ -86,7 +90,7 @@ public class GameManager : MonoBehaviour
             checking = false;
             rightCheck = false;
             lastSolved = 15;
-            gameData.lastSolved = lastSolved;
+            gameSaveData.lastSolved = lastSolved;
         }
         else if (checking && rightCheck && indexEnigma == 30)
         {
@@ -94,7 +98,7 @@ public class GameManager : MonoBehaviour
             checking = false;
             rightCheck = false;
             lastSolved = 30;
-            gameData.lastSolved = lastSolved;
+            gameSaveData.lastSolved = lastSolved;
         }
         else
         {
@@ -119,7 +123,7 @@ public class GameManager : MonoBehaviour
                 if (indexEnigma > lastSolved)
                 {
                     lastSolved = indexEnigma;
-                    gameData.lastSolved = lastSolved;
+                    gameSaveData.lastSolved = lastSolved;
                 }
                 rightCheck = true;
             }
@@ -127,7 +131,7 @@ public class GameManager : MonoBehaviour
             {
                 rightCheck = false;
                 nWrongs++;
-                gameData.nWrongs = nWrongs;
+                gameSaveData.nWrongs = nWrongs;
             }
             checking = true;
             MixerAudio.instance.StopMusic();
@@ -220,43 +224,46 @@ public class GameManager : MonoBehaviour
     {
         if (!saving)
         {
-            //Debug.Log("Saving...");
             saving = true;
-            yield return SaveSystem.SaveData(gameData);
+
+            yield return SaveSystem.SaveDataJson(gameSaveData);
+
             saving = false;
-            //Debug.Log("Saved!");
         }
     }
 
     public void LoadGame()
     {
         gameData = SaveSystem.LoadData();
-        if (gameData == null)
+        gameSaveData = SaveSystem.LoadDataJson();
+        if (gameData == null &&  gameSaveData == null) 
         {
-            gameData = new SaveData();
-            gameData.lastSolved = 0;
-            gameData.nWrongs = 0;
-            gameData.darkKnightStarted = false;
+            gameSaveData = new GameSaved();
             firstRun = true;
         }
-        else
+        else if(gameData != null && gameSaveData == null) // NEED MIGRATION
         {
             lastSolved = gameData.lastSolved;
             nWrongs = gameData.nWrongs;
             indexEnigma = lastSolved;
             darkKnightStarted = gameData.darkKnightStarted;
-        }
+            gameSaveData = SaveSystem.MigrateSaving(gameData);
+            StartCoroutine(SaveGame());
 
+            //TODO: ELIMINARE VECCHIO SALVATAGGIO
+            SaveSystem.DeleteDeprecatedSaving();
+        }
+        else
+        {
+            lastSolved = gameSaveData.lastSolved;
+            nWrongs = gameSaveData.nWrongs;
+            indexEnigma = lastSolved;
+            darkKnightStarted = gameSaveData.darkKnightStarted;
+        }
     }
 
     public void OpenInstagram()
     {
         Application.OpenURL("https://www.instagram.com/sibroxcompany/");
     }
-
-    public void LoadBufera()
-    {
-        LoadSceneByIndex(xMasScene);
-    }
-
 }

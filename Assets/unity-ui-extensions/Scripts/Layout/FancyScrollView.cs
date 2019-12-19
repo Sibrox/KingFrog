@@ -12,7 +12,7 @@ namespace UnityEngine.UI.Extensions
         [SerializeField, Range(0f, 1f)]
         float cellOffset;
         [SerializeField]
-        bool loop;
+        bool loop = false;
         [SerializeField]
         GameObject cellBase;
 

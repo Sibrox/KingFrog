@@ -73,10 +73,10 @@ public class MenuEnigmiManager : MonoBehaviour
         //BACK TO ANOTHER SCENE OR COMIING FROM START
         else
         {
-            if (!GameManager.instance.gameData.darkKnightStarted && GameManager.instance.lastSolved == 15)
+            if (!GameManager.instance.gameSaveData.darkKnightStarted && GameManager.instance.lastSolved == 15)
             {
                 dialogDarkKnight.SetActive(true);
-                GameManager.instance.gameData.darkKnightStarted = true;
+                GameManager.instance.gameSaveData.darkKnightStarted = true;
                 GameManager.instance.StartCoroutine(GameManager.instance.SaveGame());
             }
             else
