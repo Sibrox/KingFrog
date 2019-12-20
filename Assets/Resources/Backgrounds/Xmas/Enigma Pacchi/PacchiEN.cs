@@ -157,24 +157,24 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         colorePacco = COLOR.BLUE;
         IndexBox++;
         }
-        if (editable && IndexBox == 1 && powered)
+        else if (editable && IndexBox == 1 && powered)
         {
             if (coloreFiocco == COLOR.BLUE)
             {
                 pacco.sprite = imagine[3];
             }
-            if (coloreFiocco == COLOR.RED)
+            else if (coloreFiocco == COLOR.RED)
             {
                 pacco.sprite = imagine[4];
             }
-            if (coloreFiocco == COLOR.GREEN)
+            else if (coloreFiocco == COLOR.GREEN)
             {
                 pacco.sprite = imagine[5];
             }
         colorePacco = COLOR.RED;
         IndexBox++;
         }
-        if (editable && IndexBox == 2 && powered)
+        else if (editable && IndexBox == 2 && powered)
         {
 
             if (coloreFiocco == COLOR.BLUE)
