@@ -12,6 +12,7 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public Sprite[] imagine; //pacco Blu-Blu, Blu-Rosso, Blu-Verde, Rosso-Blu, Rosso-Rosso, Rosso-Verde, Verde-Blu, Verde-Rosso, Verde-Verde
     public bool editable, powered, draggin;
     public Drawer drawer;
+    public GameObject canvas;
 
     public COLOR colorePacco;
     public COLOR coloreFiocco;
@@ -35,6 +36,7 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         powered = false;
         draggin = false;
         coloreFiocco = COLOR.GREEN;
+      
     }
 
     // Update is called once per frame
@@ -47,6 +49,13 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         }
 
+        if (draggin)
+        {
+            GetComponent<RectTransform>().SetAsLastSibling();
+            Vector2 points = new Vector2();
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.GetComponent<RectTransform>(), Input.mousePosition, Camera.main, out points);
+            GetComponent<RectTransform>().localPosition = new Vector3(points.x , points.y, 0);
+        }
 
         /* if (){    //Si trova in quella posizione
 
@@ -63,12 +72,12 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             }
             if (colorePacco == COLOR.RED)
             {
-                pacco.sprite = imagine[1];
+                pacco.sprite = imagine[3];
                 coloreFiocco = COLOR.BLUE;
             }
-            else
+            if (colorePacco == COLOR.GREEN)
             {
-                pacco.sprite = imagine[2];
+                pacco.sprite = imagine[6];
                 coloreFiocco = COLOR.BLUE;
             }
 
@@ -78,7 +87,7 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             if (colorePacco == COLOR.BLUE)
             {
-                pacco.sprite = imagine[3];
+                pacco.sprite = imagine[1];
                 coloreFiocco = COLOR.RED;
             }
             if (colorePacco == COLOR.RED)
@@ -86,9 +95,9 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 pacco.sprite = imagine[4];
                 coloreFiocco = COLOR.RED;
             }
-            else
+            if (colorePacco == COLOR.GREEN)
             {
-                pacco.sprite = imagine[5];
+                pacco.sprite = imagine[7];
                 coloreFiocco = COLOR.RED;
             }
         }
@@ -98,15 +107,15 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             if (colorePacco == COLOR.BLUE)
             {
-                pacco.sprite = imagine[6];
+                pacco.sprite = imagine[2];
                 coloreFiocco = COLOR.GREEN;
             }
             if (colorePacco == COLOR.RED)
             {
-                pacco.sprite = imagine[7];
+                pacco.sprite = imagine[5];
                 coloreFiocco = COLOR.GREEN;
             }
-            else
+            if (colorePacco == COLOR.GREEN)
             {
                 pacco.sprite = imagine[8];
                 coloreFiocco = COLOR.GREEN;
