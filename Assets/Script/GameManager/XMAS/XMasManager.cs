@@ -52,6 +52,7 @@ public class XMasManager : MonoBehaviour
 
 
         UpdateGold();
+        Debug.Log(JsonUtility.ToJson(GameManager.instance.gameSaveData).ToString());
     }
 
     // Update is called once per frame
@@ -68,6 +69,7 @@ public class XMasManager : MonoBehaviour
         for(int j = 0; j < i; j++)
         {
             buttons[j].SetGold();
+            buttons[j].GetComponent<Button>().interactable = true;
         }
 
         if (i < 4) buttons[i].gameObject.GetComponent<Button>().interactable = true;

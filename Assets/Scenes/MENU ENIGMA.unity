@@ -8620,6 +8620,7 @@ MonoBehaviour:
   xmasMenu: {fileID: 841059184}
   indexXmas: 0
   textSolvedXmas: {fileID: 2119123728}
+  playServiceDebug: {fileID: 1920135463}
 --- !u!1 &616634385
 GameObject:
   m_ObjectHideFlags: 0

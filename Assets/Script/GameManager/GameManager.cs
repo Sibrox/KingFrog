@@ -115,6 +115,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(CoroutineLoad(indexMenu));
         }
         StartCoroutine(SaveGame());
+        GooglePlayServices.SaveToCloud();
     }
 
     public void LoadSceneByIndex(int indexScene)
@@ -172,6 +173,7 @@ public class GameManager : MonoBehaviour
         if (indexScene > 0 && indexScene <= 30)
         {
             StartCoroutine(SaveGame());
+            GooglePlayServices.SaveToCloud();
             if (indexScene != indexEnigma) nHint = -1;
             if (!enteredEnigma[indexScene - 1])
             {
@@ -200,6 +202,7 @@ public class GameManager : MonoBehaviour
         else if (indexScene == indexMenu)
         {
             StartCoroutine(SaveGame());
+            GooglePlayServices.SaveToCloud();
 
             checking = false;
         }
@@ -271,24 +274,14 @@ public class GameManager : MonoBehaviour
             gameSaveData = SaveSystem.LoadDataJson();
             if (gameSaveData == null)
             {
-                GooglePlayServices.LoadFromCloud();
-            }
-
-            if (gameSaveData == null)
-            {
-                gameSaveData = new GameSaved();
-                firstRun = true;
+                GooglePlayServices.LoadFromCloud(); // In questa funzione il salvataggio viene inizializzato se la load non va a buon fine
             }
             else
             {
-                lastSolved = gameSaveData.lastSolved;
-                nWrongs = gameSaveData.nWrongs;
-                indexEnigma = lastSolved;
-                darkKnightStarted = gameSaveData.darkKnightStarted;
+                SetSave();
             }
-        }
 
-        GooglePlayServices.SaveToCloud();
+        }
     }
 
     public void OpenInstagram()
@@ -350,5 +343,14 @@ public class GameManager : MonoBehaviour
         GameManager.instance.indexStatus = indexScene;
     }
 
+
+    public void SetSave()
+    {
+
+        lastSolved = gameSaveData.lastSolved;
+        nWrongs = gameSaveData.nWrongs;
+        indexEnigma = lastSolved;
+        darkKnightStarted = gameSaveData.darkKnightStarted;
+    }
 
 }
