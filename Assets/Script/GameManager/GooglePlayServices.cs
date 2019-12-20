@@ -19,7 +19,9 @@ public class GooglePlayServices
 
     public static string _saveName = "kingfrog_cloud_saving";
 
-    private static bool Authenticated
+    public static bool loading = false;
+
+    public static bool Authenticated
     {
         get
         {
@@ -31,6 +33,7 @@ public class GooglePlayServices
     public static void Authentication()
     {
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
+        .EnableSavedGames()
         .Build();
 
         PlayGamesPlatform.InitializeInstance(config);
@@ -74,12 +77,19 @@ public class GooglePlayServices
     {
         if (Authenticated)
         {
+            loading = true;
             Debug.Log("Loading game progress from the cloud.");
             ((PlayGamesPlatform)Social.Active).SavedGame.OpenWithAutomaticConflictResolution(
                 _saveName, //name of file.
                 DataSource.ReadCacheOrNetwork,
                 ConflictResolutionStrategy.UseLongestPlaytime,
                 LoadGameAfterOpen);
+        }
+        else
+        {
+            GameManager.instance.gameSaveData = new GameSaved();
+            GameManager.instance.firstRun = true;
+            GameManager.instance.SetSave();
         }
     }
 
@@ -96,6 +106,12 @@ public class GooglePlayServices
             //Load from cloud
             ((PlayGamesPlatform)Social.Active).SavedGame.ReadBinaryData(game, SavedGameLoaded);
             //loading
+        }   
+        else
+        {
+            GameManager.instance.gameSaveData = new GameSaved();
+            GameManager.instance.firstRun = true;
+            GameManager.instance.SetSave();
         }
     }
 
@@ -108,10 +124,17 @@ public class GooglePlayServices
             // data è un vettore di byte che va trasformato in una stringa json
             string json = FromBytes(data);
             GameManager.instance.gameSaveData = JsonUtility.FromJson<GameSaved>(json);
+            loading = false;
+            GameManager.instance.SetSave();
         }
         else
         {
             Debug.LogWarning("Error reading game: " + status);
+            GameManager.instance.gameSaveData = new GameSaved();
+            GameManager.instance.firstRun = true;
+            GameManager.instance.SetSave();
+
+            loading = false;
         }
     }
 
@@ -122,13 +145,13 @@ public class GooglePlayServices
         if (status == SavedGameRequestStatus.Success)
         {
             //read bytes from save
-            byte[] data = ToBytes(GameManager.instance.gameSaveData.ToString());
+            string textSave = JsonUtility.ToJson(GameManager.instance.gameSaveData);
+            byte[] data = ToBytes(textSave);
             //create builder. here you can add play time, time created etc for UI.
             SavedGameMetadataUpdate.Builder builder = new SavedGameMetadataUpdate.Builder();
             SavedGameMetadataUpdate updatedMetadata = builder.Build();
             //saving to cloud
             ((PlayGamesPlatform)Social.Active).SavedGame.CommitUpdate(game, updatedMetadata, data, SavedGameWritten);
-            //loading
         }
     }
 
