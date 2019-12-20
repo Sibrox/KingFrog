@@ -16,7 +16,7 @@ public class MixerAudio : MonoBehaviour
     [Space(10)]
 
     public bool EFFECTS;
-    public AudioClip money, click, feedOrLock, ignite, gold,laugh,ironWheel,magic,unlock,click2,click2in,click2out,bip;
+    public AudioClip money, click, feedOrLock, ignite, gold, laugh, ironWheel, magic, unlock, click2, click2in, click2out, bip, corrente;
     [Space(10)]
     public bool SONGS;
     public AudioClip startSong, enigmaSong, solutionSong, menuSong,trasformationSong,darkSong,bogNil;
@@ -36,7 +36,8 @@ public class MixerAudio : MonoBehaviour
         CLICK2,
         CLICK2IN,
         CLICK2OUT,
-        BIP
+        BIP,
+        CORRENTE
     }
 
     public enum SONG_TYPE
@@ -179,6 +180,9 @@ public class MixerAudio : MonoBehaviour
                 break;
             case EFFECTS_TYPE.BIP:
                 clip = bip;
+                break;
+            case EFFECTS_TYPE.CORRENTE:
+                clip = corrente;
                 break;
         }
         StartCoroutine(TransictionEffects(clip, waitTime));
