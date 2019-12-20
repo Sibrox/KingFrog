@@ -277,6 +277,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enigma
       objectReference: {fileID: 0}
+    - target: {fileID: 822598198074875627, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c1288a07ab05bc4191287d16cc02f8e,
+        type: 3}
     - target: {fileID: 1943468940418972714, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -392,29 +398,54 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1875880615}
-    - target: {fileID: 2993569125703229972, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+    - target: {fileID: 5652505399188386129, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
+      propertyPath: nEnigma
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7025951607789185449, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 822598198074875627, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+    - target: {fileID: 7127023698838757314, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8c1288a07ab05bc4191287d16cc02f8e,
+      objectReference: {fileID: 21300000, guid: 35615649eb47c074bb967cac1e3eb7f8,
         type: 3}
-    - target: {fileID: 5652505399188386129, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+    - target: {fileID: 2993569125703229972, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
-      propertyPath: nEnigma
-      value: 1
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfcc4d61e5b31284d9e81096a8bf26be, type: 3}
+--- !u!1 &218447319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6912482877287327035, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+    type: 3}
+  m_PrefabInstance: {fileID: 218447318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &218447320
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218447319}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4218a45f21b6a34b81dd1bd868e49a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1240557624
 GameObject:
   m_ObjectHideFlags: 0

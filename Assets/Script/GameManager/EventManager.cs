@@ -108,7 +108,6 @@ public class EventManager : MonoBehaviour
 
     public void StartXmas()
     {
-        UnlockXmas();
         GameManager.instance.menu_status = MENU_STATUS.XMAS;
         xmasMenu.SetActive(true);
         eventMenu.SetActive(false);
@@ -132,17 +131,6 @@ public class EventManager : MonoBehaviour
         mainMenu.SetActive(true);
         GameManager.instance.menu_status = MENU_STATUS.MENU;
         MixerAudio.instance.ChangeSong(MixerAudio.SONG_TYPE.MAIN, 0.0f);
-    }
-
-    private void UnlockXmas()
-    {
-        //ACHIVEMENT GPS
-        foreach(Event e in GameManager.instance.gameSaveData.events){
-            if(e.name.CompareTo( "XMAS 2019") == 0)
-            {
-                e.unlocked = true;
-            }
-        }
     }
 
 }

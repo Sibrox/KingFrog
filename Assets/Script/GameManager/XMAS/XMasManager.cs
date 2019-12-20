@@ -49,6 +49,10 @@ public class XMasManager : MonoBehaviour
         }
 
         if (events["XMAS 2019"].unlocked) dialogUnlock.SetActive(false);
+        else
+        {
+            UnlockXmas();
+        }
 
 
         UpdateGold();
@@ -73,5 +77,17 @@ public class XMasManager : MonoBehaviour
         }
 
         if (i < 4) buttons[i].gameObject.GetComponent<Button>().interactable = true;
+    }
+
+    private void UnlockXmas()
+    {
+        //ACHIVEMENT GPS
+        foreach (Event e in GameManager.instance.gameSaveData.events)
+        {
+            if (e.name.CompareTo("XMAS 2019") == 0)
+            {
+                e.unlocked = true;
+            }
+        }
     }
 }

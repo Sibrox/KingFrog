@@ -126,7 +126,15 @@ public class DialogBox : MonoBehaviour
         if (status == STATUS.ENIGMA)
         {
             hud = gameObject.transform.parent.gameObject.GetComponent<HudEnigma>();
-            riddle = GameManager.instance.riddles[hud.nEnigma - 1];
+
+            if (GameManager.instance.menu_status == KingFrog.MENU_STATUS.XMAS)
+            {
+                riddle = GameManager.instance.xMasRiddle[hud.nEnigma - 1];
+            }
+            else
+            {
+                riddle = GameManager.instance.riddles[hud.nEnigma - 1];
+            }
 
             //Set Text
             textITA = riddle.text_ita;

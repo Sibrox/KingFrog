@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
         }
         StartCoroutine(SaveGame());
         GooglePlayServices.SaveToCloud();
+        MixerAudio.instance.ChangeSong(MixerAudio.SONG_TYPE.MENU, 0);
     }
 
     public void LoadSceneByIndex(int indexScene)
