@@ -10,14 +10,17 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public Image pacco;
     public GameObject palleAccese;
     public Sprite[] imagine; //pacco Blu-Blu, Blu-Rosso, Blu-Verde, Rosso-Blu, Rosso-Rosso, Rosso-Verde, Verde-Blu, Verde-Rosso, Verde-Verde
-    public bool editable, powered, draggin;
+    public bool editable, powered, draggin, isEnter;
     public Drawer drawer;
     public GameObject canvas;
+    private Vector3 cordinateMagnete;
 
     public COLOR colorePacco;
     public COLOR coloreFiocco;
 
     public int IndexBox = 0;
+
+    public PacchiEN other;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -27,6 +30,16 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerUp(PointerEventData eventData)
     {
         draggin = false;
+
+        if (isEnter && !other.editable)
+        {
+            this.gameObject.transform.localPosition = cordinateMagnete;
+            editable = true;
+        }
+        else
+        {
+            editable = false;
+        }
     }
 
     void Start()
@@ -35,6 +48,7 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         editable = false;
         powered = false;
         draggin = false;
+        isEnter = false;
         coloreFiocco = COLOR.GREEN;
       
     }
@@ -46,6 +60,7 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             powered = true;
             palleAccese.SetActive(true);
+            MixerAudio.instance.PlayEffects(MixerAudio.EFFECTS_TYPE.CORRENTE, 0);
 
         }
 
@@ -125,7 +140,7 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void ChangeColor()
     {
-        if (editable && IndexBox == 0)
+        if (editable && IndexBox == 0 && powered)
         {
             if (coloreFiocco == COLOR.BLUE)
             {
@@ -142,7 +157,7 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         colorePacco = COLOR.BLUE;
         IndexBox++;
         }
-        if (editable && IndexBox == 1)
+        if (editable && IndexBox == 1 && powered)
         {
             if (coloreFiocco == COLOR.BLUE)
             {
@@ -159,7 +174,7 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         colorePacco = COLOR.RED;
         IndexBox++;
         }
-        if (editable && IndexBox == 2)
+        if (editable && IndexBox == 2 && powered)
         {
 
             if (coloreFiocco == COLOR.BLUE)
@@ -176,6 +191,26 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             }
         colorePacco = COLOR.GREEN;
         IndexBox = 0;
+
+            //aggiungere animazione "mancata corrente?"
+        }
+
+    }
+   
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Magnetic")
+        {
+            isEnter = true;
+            cordinateMagnete = collision.gameObject.transform.localPosition;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Magnetic")
+        {
+            isEnter = false;
         }
     }
 }

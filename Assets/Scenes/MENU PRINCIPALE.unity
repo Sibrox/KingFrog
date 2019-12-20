@@ -685,6 +685,7 @@ MonoBehaviour:
   click2in: {fileID: 8300000, guid: 40c40b551c7d18643bb74b3b3e1cfee2, type: 3}
   click2out: {fileID: 8300000, guid: 89b7708015e48d24f99ffb7addec5e1f, type: 3}
   bip: {fileID: 8300000, guid: 32f0181e0dde49940810aadf1b50cdc4, type: 3}
+  corrente: {fileID: 8300000, guid: 49dcd0aaa40c06243a8fbb0d2b7a5084, type: 3}
   SONGS: 0
   startSong: {fileID: 8300000, guid: 1b8573ff49e800c45869dd0a0edbf4cf, type: 3}
   enigmaSong: {fileID: 8300000, guid: f89599ce9b327c44fb3607380948ba74, type: 3}
