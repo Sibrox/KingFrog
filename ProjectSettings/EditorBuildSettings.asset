@@ -122,4 +122,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ENIGMI/XMAS/Batteria.unity
     guid: 595b15e3d6a7e054bad0ae6a7ccef7a6
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/XMAS/Pacchi.unity
+    guid: b8ebcba5ce703b44fab67a7e730a5c1a
   m_configObjects: {}

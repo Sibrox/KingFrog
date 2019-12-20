@@ -1761,21 +1761,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
-    - target: {fileID: 3941059418399885968, guid: 0ae520c4566e1d240a7d9041c6833ba4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2828972510260765299, guid: 0ae520c4566e1d240a7d9041c6833ba4,
-        type: 3}
-      propertyPath: textITA
-      value: 'Ti sta piacendo il gioco? Seguici su Instagram. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2828972510260765299, guid: 0ae520c4566e1d240a7d9041c6833ba4,
-        type: 3}
-      propertyPath: textENG
-      value: Do you like the game? Follow us on Instagram.
-      objectReference: {fileID: 0}
     - target: {fileID: 3941059419087229247, guid: 0ae520c4566e1d240a7d9041c6833ba4,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -1796,17 +1781,32 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 63.847
       objectReference: {fileID: 0}
-    - target: {fileID: 3941059419087229243, guid: 0ae520c4566e1d240a7d9041c6833ba4,
+    - target: {fileID: 3941059418399885968, guid: 0ae520c4566e1d240a7d9041c6833ba4,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8fa8dc9aae42f00499f035a51c664c87,
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828972510260765299, guid: 0ae520c4566e1d240a7d9041c6833ba4,
         type: 3}
+      propertyPath: textITA
+      value: 'Ti sta piacendo il gioco? Seguici su Instagram. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828972510260765299, guid: 0ae520c4566e1d240a7d9041c6833ba4,
+        type: 3}
+      propertyPath: textENG
+      value: Do you like the game? Follow us on Instagram.
+      objectReference: {fileID: 0}
     - target: {fileID: 3941059419087229241, guid: 0ae520c4566e1d240a7d9041c6833ba4,
         type: 3}
       propertyPath: down
       value: 
       objectReference: {fileID: 21300000, guid: 00c604c23a4d61744bf0c9ce69799f1a,
+        type: 3}
+    - target: {fileID: 3941059419087229243, guid: 0ae520c4566e1d240a7d9041c6833ba4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8fa8dc9aae42f00499f035a51c664c87,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ae520c4566e1d240a7d9041c6833ba4, type: 3}
@@ -8620,7 +8620,7 @@ MonoBehaviour:
   xmasMenu: {fileID: 841059184}
   indexXmas: 0
   textSolvedXmas: {fileID: 2119123728}
-  playServiceDebug: {fileID: 1920135463}
+  playServiceDebug: {fileID: 0}
 --- !u!1 &616634385
 GameObject:
   m_ObjectHideFlags: 0
@@ -14046,6 +14046,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3370229518498623446, guid: 56ef388e8a22b314da5c39d67dd2bae7,
+        type: 3}
+      propertyPath: character
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3468827096251912395, guid: 56ef388e8a22b314da5c39d67dd2bae7,
         type: 3}
       propertyPath: textITA
@@ -14064,11 +14069,6 @@ PrefabInstance:
     - target: {fileID: 3468827096251912395, guid: 56ef388e8a22b314da5c39d67dd2bae7,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3370229518498623446, guid: 56ef388e8a22b314da5c39d67dd2bae7,
-        type: 3}
-      propertyPath: character
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1114086899143582558, guid: 56ef388e8a22b314da5c39d67dd2bae7,
@@ -21848,6 +21848,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.99980944
       objectReference: {fileID: 0}
+    - target: {fileID: 3370229518498623446, guid: 56ef388e8a22b314da5c39d67dd2bae7,
+        type: 3}
+      propertyPath: character
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3468827096251912395, guid: 56ef388e8a22b314da5c39d67dd2bae7,
         type: 3}
       propertyPath: textITA
@@ -21867,11 +21872,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3370229518498623446, guid: 56ef388e8a22b314da5c39d67dd2bae7,
-        type: 3}
-      propertyPath: character
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1114086899143582558, guid: 56ef388e8a22b314da5c39d67dd2bae7,
         type: 3}
@@ -26205,7 +26205,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 39
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -31853,6 +31853,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.9998389
       objectReference: {fileID: 0}
+    - target: {fileID: 3370229518498623446, guid: 56ef388e8a22b314da5c39d67dd2bae7,
+        type: 3}
+      propertyPath: character
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3468827096251912395, guid: 56ef388e8a22b314da5c39d67dd2bae7,
         type: 3}
       propertyPath: sentencesGood1ITA.Array.data[0]
@@ -31942,11 +31947,6 @@ PrefabInstance:
         type: 3}
       propertyPath: textWrongENG
       value: 'Ops! From your mistakes, i earn money. Another coin for me . Total: '
-      objectReference: {fileID: 0}
-    - target: {fileID: 3370229518498623446, guid: 56ef388e8a22b314da5c39d67dd2bae7,
-        type: 3}
-      propertyPath: character
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1114086899143582558, guid: 56ef388e8a22b314da5c39d67dd2bae7,
         type: 3}
