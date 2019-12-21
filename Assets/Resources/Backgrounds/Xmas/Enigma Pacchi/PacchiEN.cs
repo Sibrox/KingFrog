@@ -42,7 +42,7 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
     }
 
-    void Start()
+    private void Awake()
     {
         pacco = GetComponent<Image>();
         editable = false;
@@ -50,7 +50,13 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         draggin = false;
         isEnter = false;
         coloreFiocco = COLOR.GREEN;
-      
+        colorePacco = COLOR.GRAY;
+    }
+
+    void Start()
+    {
+
+
     }
 
     // Update is called once per frame
@@ -69,14 +75,113 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             GetComponent<RectTransform>().SetAsLastSibling();
             Vector2 points = new Vector2();
             RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.GetComponent<RectTransform>(), Input.mousePosition, Camera.main, out points);
-            GetComponent<RectTransform>().localPosition = new Vector3(points.x , points.y, 0);
+            GetComponent<RectTransform>().localPosition = new Vector3(points.x, points.y, 0);
         }
 
-        /* if (){    //Si trova in quella posizione
 
-             editable = true;
-             */
 
+
+
+    }
+
+    public void ChangeColor()
+    {
+        if (editable && IndexBox == 0 && powered)
+        {
+            if (coloreFiocco == COLOR.BLUE)
+            {
+                pacco.sprite = imagine[0];
+            }
+            if (coloreFiocco == COLOR.RED)
+            {
+                pacco.sprite = imagine[1];
+            }
+            if (coloreFiocco == COLOR.GREEN)
+            {
+                pacco.sprite = imagine[2];
+            }
+            colorePacco = COLOR.BLUE;
+            IndexBox++;
+        }
+        else if (editable && IndexBox == 1 && powered)
+        {
+            if (coloreFiocco == COLOR.BLUE)
+            {
+                pacco.sprite = imagine[3];
+            }
+            else if (coloreFiocco == COLOR.RED)
+            {
+                pacco.sprite = imagine[4];
+            }
+            else if (coloreFiocco == COLOR.GREEN)
+            {
+                pacco.sprite = imagine[5];
+            }
+            colorePacco = COLOR.RED;
+            IndexBox++;
+        }
+        else if (editable && IndexBox == 2 && powered)
+        {
+
+            if (coloreFiocco == COLOR.BLUE)
+            {
+                pacco.sprite = imagine[6];
+            }
+            if (coloreFiocco == COLOR.RED)
+            {
+                pacco.sprite = imagine[7];
+            }
+            if (coloreFiocco == COLOR.GREEN)
+            {
+                pacco.sprite = imagine[8];
+            }
+            colorePacco = COLOR.GREEN;
+            IndexBox = 0;
+
+            //aggiungere animazione "mancata corrente?"
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Magnetic")
+        {
+            isEnter = true;
+            cordinateMagnete = collision.gameObject.transform.localPosition;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Magnetic")
+        {
+            isEnter = false;
+        }
+    }
+
+    public void Solution()
+    {
+        other.gameObject.SetActive(true);
+        other.pacco.sprite = imagine[7];
+        other.coloreFiocco = COLOR.RED;
+        other.colorePacco = COLOR.GREEN;
+    }
+
+    public void CheckSolution()
+    {
+        if (other.gameObject.activeSelf && other.pacco.sprite == imagine[7])
+        {
+            GameManager.instance.LoadSceneByIndex(GameManager.instance.indexRight);
+        }
+        else
+        {
+            GameManager.instance.LoadSceneByIndex(GameManager.instance.indexWrong);
+        }
+    }
+
+    public void ChangeColorDrawer()
+    {
         if (editable && drawer.blue)
         {
 
@@ -93,6 +198,11 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             if (colorePacco == COLOR.GREEN)
             {
                 pacco.sprite = imagine[6];
+                coloreFiocco = COLOR.BLUE;
+            }
+            if (colorePacco == COLOR.GRAY)
+            {
+                pacco.sprite = imagine[9];
                 coloreFiocco = COLOR.BLUE;
             }
 
@@ -115,6 +225,11 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 pacco.sprite = imagine[7];
                 coloreFiocco = COLOR.RED;
             }
+            if (colorePacco == COLOR.GRAY)
+
+                pacco.sprite = imagine[10];
+            coloreFiocco = COLOR.RED;
+
         }
 
         if (editable && drawer.green)
@@ -135,99 +250,11 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 pacco.sprite = imagine[8];
                 coloreFiocco = COLOR.GREEN;
             }
-        }
-    }
-
-    public void ChangeColor()
-    {
-        if (editable && IndexBox == 0 && powered)
-        {
-            if (coloreFiocco == COLOR.BLUE)
+            if (colorePacco == COLOR.GRAY)
             {
-                pacco.sprite = imagine[0];
+                pacco.sprite = imagine[11];
+                coloreFiocco = COLOR.GREEN;
             }
-            if (coloreFiocco == COLOR.RED)
-            {
-                pacco.sprite = imagine[1];
-            }
-            if (coloreFiocco == COLOR.GREEN)
-            {
-                pacco.sprite = imagine[2];
-            }
-        colorePacco = COLOR.BLUE;
-        IndexBox++;
-        }
-        else if (editable && IndexBox == 1 && powered)
-        {
-            if (coloreFiocco == COLOR.BLUE)
-            {
-                pacco.sprite = imagine[3];
-            }
-            else if (coloreFiocco == COLOR.RED)
-            {
-                pacco.sprite = imagine[4];
-            }
-            else if (coloreFiocco == COLOR.GREEN)
-            {
-                pacco.sprite = imagine[5];
-            }
-        colorePacco = COLOR.RED;
-        IndexBox++;
-        }
-        else if (editable && IndexBox == 2 && powered)
-        {
-
-            if (coloreFiocco == COLOR.BLUE)
-            {
-                pacco.sprite = imagine[6];
-            }
-            if (coloreFiocco == COLOR.RED)
-            {
-                pacco.sprite = imagine[7];
-            }
-            if (coloreFiocco == COLOR.GREEN)
-            {
-                pacco.sprite = imagine[8];
-            }
-        colorePacco = COLOR.GREEN;
-        IndexBox = 0;
-
-            //aggiungere animazione "mancata corrente?"
-        }
-
-    }
-   
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Magnetic")
-        {
-            isEnter = true;
-            cordinateMagnete = collision.gameObject.transform.localPosition;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Magnetic")
-        {
-            isEnter = false;
-        }
-    }
-
-    public void Solution()
-    {
-        pacco.sprite = imagine[7];
-    }
-
-    public void CheckSolution()
-    {
-        if(pacco.sprite == imagine[7])
-        {
-            GameManager.instance.LoadSceneByIndex(GameManager.instance.indexRight);
-        }
-        else
-        {
-            GameManager.instance.LoadSceneByIndex(GameManager.instance.indexWrong);
         }
     }
 }

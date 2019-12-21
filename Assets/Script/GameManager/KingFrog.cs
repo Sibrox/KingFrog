@@ -43,7 +43,8 @@ namespace KingFrog
     {
         BLUE,
         RED,
-        GREEN
+        GREEN,
+        GRAY
     }
 
     public enum ACHIVEMENT
