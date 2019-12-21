@@ -11,6 +11,7 @@ using System.Text;
 using UnityEngine.SocialPlatforms;
 //for text, remove
 using UnityEngine.UI;
+using KingFrog;
 
 public class GooglePlayServices
 {
@@ -231,5 +232,34 @@ public class GooglePlayServices
         }
 
         return final;
+    }
+
+
+    public static void UnlockFirstStep(ACHIVEMENT achivement)
+    {
+        if (!Authenticated)
+        {
+            Debug.Log("Not connected on Play Services.");
+            return;
+        }
+
+        switch (achivement)
+        {
+            case ACHIVEMENT.FIRST_STEP:
+                Social.ReportProgress("CgkIzqblrPINEAIQAg", 100.0f, (bool success) => {
+                    // handle success or failure
+                    if (success)
+                    {
+                        Debug.Log("Achivement unlocked!");
+                    }
+                    else
+                    {
+                        Debug.Log("Not succeded");
+                    }
+                });
+                break;
+        }
+
+
     }
 }
