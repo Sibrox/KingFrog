@@ -484,7 +484,7 @@ PrefabInstance:
     - target: {fileID: 5652505399188386129, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: nEnigma
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7127023698838757314, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}

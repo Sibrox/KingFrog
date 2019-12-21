@@ -240,6 +240,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c398c03b456a36f45aad215d6f7696f8,
         type: 3}
+    - target: {fileID: 5652505399188386129, guid: bfcc4d61e5b31284d9e81096a8bf26be,
+        type: 3}
+      propertyPath: nEnigma
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7127023698838757314, guid: bfcc4d61e5b31284d9e81096a8bf26be,
         type: 3}
       propertyPath: m_Sprite
