@@ -338,6 +338,21 @@ public class GameManager : MonoBehaviour
             else
             {
                 GameManager.instance.rightCheck = false;
+                nWrongs++;
+                gameSaveData.nWrongs = nWrongs;
+
+                if (nWrongs >= 5)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.LIGHT_POCKET);
+                }
+                if (nWrongs >= 15)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.LEGGIANTE_POCKET);
+                }
+                if (nWrongs >= 30)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.HEAVY_POCKET);
+                }
             }
             GameManager.instance.checking = true;
             MixerAudio.instance.StopMusic();
