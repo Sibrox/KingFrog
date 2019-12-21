@@ -157,7 +157,7 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         colorePacco = COLOR.BLUE;
         IndexBox++;
         }
-        if (editable && IndexBox == 1 && powered)
+        else if (editable && IndexBox == 1 && powered)
         {
             if (coloreFiocco == COLOR.BLUE)
             {
@@ -174,7 +174,7 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         colorePacco = COLOR.RED;
         IndexBox++;
         }
-        if (editable && IndexBox == 2 && powered)
+        else if (editable && IndexBox == 2 && powered)
         {
 
             if (coloreFiocco == COLOR.BLUE)

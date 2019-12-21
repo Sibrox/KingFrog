@@ -1929,6 +1929,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayerLogo: {fileID: 1841836873}
   start: {fileID: 887908927}
+  startVideo: {fileID: 2073126529}
+  selectLanguage: {fileID: 237718574}
+  background: {fileID: 65381665}
 --- !u!1 &1858093662
 GameObject:
   m_ObjectHideFlags: 0
