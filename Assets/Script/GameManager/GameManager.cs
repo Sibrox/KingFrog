@@ -338,6 +338,21 @@ public class GameManager : MonoBehaviour
             else
             {
                 GameManager.instance.rightCheck = false;
+                nWrongs++;
+                gameSaveData.nWrongs = nWrongs;
+
+                if (nWrongs >= 5)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.LIGHT_POCKET);
+                }
+                if (nWrongs >= 15)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.LEGGIANTE_POCKET);
+                }
+                if (nWrongs >= 30)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.HEAVY_POCKET);
+                }
             }
             GameManager.instance.checking = true;
             MixerAudio.instance.StopMusic();
@@ -362,7 +377,7 @@ public class GameManager : MonoBehaviour
                 if (GameManager.instance.rightCheck)
                 {
                     MixerAudio.instance.ChangeSong(MixerAudio.SONG_TYPE.SOLUTION, 1);
-                    gameSaveData.events[indexScene - 38].solved[0] = true;
+                    gameSaveData.events[0].solved[indexScene - 38] = true;
                 }
                 else
                 {
