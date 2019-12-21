@@ -17,13 +17,14 @@
     "number": 2,
     "name": "CANDELE",
     "text_ita": "Accendendo questo macchinario e' possibile trovare la password per accedere al database dove l'aiutante di Babbo Natale ha salvato tutte le consegne da fare il 25 dicembre. Tuttavia non sembra esserci energia sufficiente per farlo funzionare, sai aiutarlo?",
-    "hint1_ita": "Hai una fonte di energia a cui collegare il macchinario?",
+    "text_eng": "Insert text.",
+	"hint1_ita": "Hai una fonte di energia a cui collegare il macchinario?",
     "hint2_ita": "La lettera A  = 65, B = 66, C = 67 e così via fino a Z.",
-    "hint3_ita": "Hai attaccato il cellulare alla presa di corrente? La password è 4.",
+    "hint3_ita": "Hai attaccato il cellulare alla presa di corrente? La password e' 4.",
     "hint1_eng": "prova",
     "hint2_eng": "prova",
     "hint3_eng": "prova",
-    "solution_ita": "Dopo aver collegato il cellulare alla presa di corrente puoi osservare sul display il codice O-K. Ogni lettera partendo da A corrisponde a un numero, come faceva intendere la pergamena in alto a desta. La A  = 65, B = 66, C = 67 e cosi via. In questo modo O = 79 e K = 75.  79-75=4. La password e’ quindi 4.",
+    "solution_ita": "Dopo aver collegato il cellulare alla presa di corrente puoi osservare sul display il codice O-K. Ogni lettera partendo da A corrisponde a un numero, come faceva intendere la pergamena in alto a destra. La A=65, B=66, C=67 e cosi' via. In questo modo O=79 e K=75. 78-75=4. La password e' quindi 4.",
 	"solution_eng": "prova"
   },
   {

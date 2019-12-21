@@ -88,9 +88,12 @@ public class GooglePlayServices
         }
         else
         {
-            GameManager.instance.gameSaveData = new GameSaved();
-            GameManager.instance.firstRun = true;
-            GameManager.instance.SetSave();
+            if (GameManager.instance.gameSaveData == null)
+            {
+                GameManager.instance.gameSaveData = new GameSaved();
+                GameManager.instance.firstRun = true;
+                GameManager.instance.SetSave();
+            }
         }
     }
 
@@ -110,9 +113,12 @@ public class GooglePlayServices
         }   
         else
         {
-            GameManager.instance.gameSaveData = new GameSaved();
-            GameManager.instance.firstRun = true;
-            GameManager.instance.SetSave();
+            if (GameManager.instance.gameSaveData == null)
+            {
+                GameManager.instance.gameSaveData = new GameSaved();
+                GameManager.instance.firstRun = true;
+                GameManager.instance.SetSave();
+            }
         }
     }
 
@@ -145,11 +151,13 @@ public class GooglePlayServices
         }
         else
         {
-            Debug.LogWarning("Error reading game: " + status);
-            GameManager.instance.gameSaveData = new GameSaved();
-            GameManager.instance.firstRun = true;
-            GameManager.instance.SetSave();
-
+            if (GameManager.instance.gameSaveData == null)
+            {
+                Debug.LogWarning("Error reading game: " + status);
+                GameManager.instance.gameSaveData = new GameSaved();
+                GameManager.instance.firstRun = true;
+                GameManager.instance.SetSave();
+            }
             loading = false;
         }
     }
@@ -235,7 +243,7 @@ public class GooglePlayServices
     }
 
 
-    public static void UnlockFirstStep(ACHIVEMENT achivement)
+    public static void UnlockAchivement(ACHIVEMENT achivement)
     {
         if (!Authenticated)
         {
