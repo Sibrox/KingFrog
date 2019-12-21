@@ -213,6 +213,7 @@ public class GameManager : MonoBehaviour
     public void SetEnglish()
     {
         lang = Language.LANG.ENG;
+        gameSaveData.lang = "ITA";
         isEnglish = true;
 
     }
@@ -220,11 +221,21 @@ public class GameManager : MonoBehaviour
     public void SetItalian()
     {
         lang = Language.LANG.ITA;
+        gameSaveData.lang = "ITA";
         isEnglish = false;
     }
 
     public void SetLanguage(Language.LANG lang)
     {
+        switch (lang)
+        {
+            case Language.LANG.ITA:
+                gameSaveData.lang = "ITA";
+                break;
+            case Language.LANG.ENG:
+                gameSaveData.lang = "ENG";
+                break;
+        }
         this.lang = lang;
     }
 
@@ -273,15 +284,7 @@ public class GameManager : MonoBehaviour
         else
         {
             gameSaveData = SaveSystem.LoadDataJson();
-            if (gameSaveData == null)
-            {
-                GooglePlayServices.LoadFromCloud(); // In questa funzione il salvataggio viene inizializzato se la load non va a buon fine
-            }
-            else
-            {
-                SetSave();
-            }
-
+            GooglePlayServices.LoadFromCloud(); // In questa funzione il salvataggio viene inizializzato se la load non va a buon fine
         }
     }
 
@@ -347,7 +350,15 @@ public class GameManager : MonoBehaviour
 
     public void SetSave()
     {
-
+        switch (gameSaveData.lang)
+        {
+            case "ITA":
+                lang = Language.LANG.ITA;
+                break;
+            case "ENG":
+                lang = Language.LANG.ENG;
+                break;
+        }
         lastSolved = gameSaveData.lastSolved;
         nWrongs = gameSaveData.nWrongs;
         indexEnigma = lastSolved;

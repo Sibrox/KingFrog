@@ -61,8 +61,8 @@ public class GooglePlayServices
             //save to named file
             ((PlayGamesPlatform)Social.Active).SavedGame.OpenWithAutomaticConflictResolution(
                 _saveName, //name of file. If save doesn't exist it will be created with this name
-                DataSource.ReadCacheOrNetwork,
-                ConflictResolutionStrategy.UseLongestPlaytime,
+                DataSource.ReadNetworkOnly,
+                ConflictResolutionStrategy.UseMostRecentlySaved,
                 SavedGameOpened);
         }
         else
@@ -81,8 +81,8 @@ public class GooglePlayServices
             Debug.Log("Loading game progress from the cloud.");
             ((PlayGamesPlatform)Social.Active).SavedGame.OpenWithAutomaticConflictResolution(
                 _saveName, //name of file.
-                DataSource.ReadCacheOrNetwork,
-                ConflictResolutionStrategy.UseLongestPlaytime,
+                DataSource.ReadNetworkOnly,
+                ConflictResolutionStrategy.UseMostRecentlySaved,
                 LoadGameAfterOpen);
         }
         else
@@ -123,9 +123,24 @@ public class GooglePlayServices
 
             // data è un vettore di byte che va trasformato in una stringa json
             string json = FromBytes(data);
-            GameManager.instance.gameSaveData = JsonUtility.FromJson<GameSaved>(json);
-            loading = false;
-            GameManager.instance.SetSave();
+            if (json.CompareTo("") != 0)
+            {
+                GameSaved tmp = JsonUtility.FromJson<GameSaved>(json);
+
+
+                GameManager.instance.gameSaveData = MergeSave(tmp);
+                loading = false;
+                GameManager.instance.SetSave();
+            }
+            else if(GameManager.instance.gameSaveData == null)
+            {
+                Debug.LogWarning("Error reading game: " + status);
+                GameManager.instance.gameSaveData = new GameSaved();
+                GameManager.instance.firstRun = true;
+                GameManager.instance.SetSave();
+
+                loading = false;
+            }
         }
         else
         {
@@ -188,5 +203,33 @@ public class GooglePlayServices
         Social.ReportProgress("CgkIzqblrPINEAIQAg", 100.0f, (bool success) => {
             // handle success or failure
         });
+    }
+
+    public static GameSaved MergeSave(GameSaved cloudSave)
+    {
+        GameSaved final = cloudSave;
+        int countCloud = 0, countGame = 0;
+
+        if(GameManager.instance.gameSaveData == null)
+        {
+            return cloudSave;
+        }
+        if(GameManager.instance.gameSaveData.lastSolved > cloudSave.lastSolved)
+        {
+            final.lastSolved = GameManager.instance.gameSaveData.lastSolved;
+        }
+        
+        for(int i = 0; i < 4; i++)
+        {
+            if (cloudSave.events[0].solved[i]) countCloud++;
+            if (GameManager.instance.gameSaveData.events[0].solved[i]) countGame++;
+        }
+
+        if(countGame > countCloud)
+        {
+            final.events[0].solved = GameManager.instance.gameSaveData.events[0].solved;
+        }
+
+        return final;
     }
 }

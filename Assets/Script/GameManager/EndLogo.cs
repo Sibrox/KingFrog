@@ -7,7 +7,9 @@ public class EndLogo : MonoBehaviour
 {
 
     public VideoPlayer videoPlayerLogo;
-    public GameObject start;
+    public GameObject start,startVideo;
+    public GameObject selectLanguage;
+    public GameObject background;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,17 @@ public class EndLogo : MonoBehaviour
         yield return new WaitForSeconds(1);
         GameManager.instance.LoadGame();
         videoPlayerLogo.gameObject.SetActive(false);
-        start.SetActive(true);
+        if (GameManager.instance.firstRun)
+        {
+            start.SetActive(true);
+        }
+        else
+        {
+            start.SetActive(true);
+            selectLanguage.SetActive(false);
+            background.SetActive(false);
+            GameManager.instance.StartGame();
+            
+        }
     }
 }

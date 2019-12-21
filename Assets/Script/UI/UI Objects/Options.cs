@@ -48,7 +48,7 @@ public class Options : MonoBehaviour
             lang = Language.LANG.ENG;
         }
 
-        GameManager.instance.lang = lang;
+        GameManager.instance.SetLanguage(lang);
         SwapFlag();
     }
 

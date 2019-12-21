@@ -23,6 +23,7 @@ public class Battery : MonoBehaviour
         {
             charging = true;
             StartCoroutine(TurnBattery());
+            MixerAudio.instance.PlayEffects(MixerAudio.EFFECTS_TYPE.CORRENTE, 0);
         }
 
 
