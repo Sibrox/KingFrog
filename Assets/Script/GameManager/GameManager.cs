@@ -362,7 +362,7 @@ public class GameManager : MonoBehaviour
                 if (GameManager.instance.rightCheck)
                 {
                     MixerAudio.instance.ChangeSong(MixerAudio.SONG_TYPE.SOLUTION, 1);
-                    gameSaveData.events[indexScene - 38].solved[0] = true;
+                    gameSaveData.events[0].solved[indexScene - 38] = true;
                 }
                 else
                 {

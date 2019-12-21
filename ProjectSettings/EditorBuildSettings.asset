@@ -120,8 +120,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Video Scene/END DK.unity
     guid: a9c0eaa2d21cd0e419a6073bf06de810
   - enabled: 1
+    path: Assets/Scenes/ENIGMI/XMAS/Alberi.unity
+    guid: 7d301d435ff9f5a4e9c4ad71d073338b
+  - enabled: 1
     path: Assets/Scenes/ENIGMI/XMAS/Batteria.unity
     guid: 595b15e3d6a7e054bad0ae6a7ccef7a6
+  - enabled: 1
+    path: Assets/Scenes/ENIGMI/XMAS/Elfa.unity
+    guid: 5d2f9dc3e86e71f40b0dd4cd04448c02
   - enabled: 1
     path: Assets/Scenes/ENIGMI/XMAS/Pacchi.unity
     guid: b8ebcba5ce703b44fab67a7e730a5c1a
