@@ -213,4 +213,21 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             isEnter = false;
         }
     }
+
+    public void Solution()
+    {
+        pacco.sprite = imagine[7];
+    }
+
+    public void CheckSolution()
+    {
+        if(pacco.sprite == imagine[7])
+        {
+            GameManager.instance.LoadSceneByIndex(GameManager.instance.indexRight);
+        }
+        else
+        {
+            GameManager.instance.LoadSceneByIndex(GameManager.instance.indexWrong);
+        }
+    }
 }
