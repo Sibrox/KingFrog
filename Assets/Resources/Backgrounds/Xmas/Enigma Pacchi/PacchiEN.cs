@@ -163,11 +163,11 @@ public class PacchiEN : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             {
                 pacco.sprite = imagine[3];
             }
-            if (coloreFiocco == COLOR.RED)
+            else if (coloreFiocco == COLOR.RED)
             {
                 pacco.sprite = imagine[4];
             }
-            if (coloreFiocco == COLOR.GREEN)
+            else if (coloreFiocco == COLOR.GREEN)
             {
                 pacco.sprite = imagine[5];
             }

@@ -24,7 +24,14 @@
 
 public static class GPGSIds
 {
+        public const string achievement_heavy_pocket = "CgkIzqblrPINEAIQCQ"; // <GPGSID>
+        public const string achievement_artist = "CgkIzqblrPINEAIQDA"; // <GPGSID>
+        public const string achievement_dark_knight = "CgkIzqblrPINEAIQCw"; // <GPGSID>
+        public const string achievement_hevight_pocket_not_heavy_not_light = "CgkIzqblrPINEAIQCA"; // <GPGSID>
+        public const string achievement_light_pocket = "CgkIzqblrPINEAIQBw"; // <GPGSID>
         public const string achievement_first_steps = "CgkIzqblrPINEAIQAg"; // <GPGSID>
+        public const string achievement_madalina = "CgkIzqblrPINEAIQCg"; // <GPGSID>
+        public const string achievement_xmas = "CgkIzqblrPINEAIQDQ"; // <GPGSID>
 
 }
 
