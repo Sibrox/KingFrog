@@ -1,0 +1,58 @@
+[
+  {
+    "number": 1,
+    "name": "Alberi",
+    "text_ita": "Una strana griglia 3x3 raffigura diversi alberi, purtroppo manca l’ultimo tassello in basso a destra. Sembra seguire uno schema, quale tassello e’ quello giusto?",
+    "text_eng": "A weird 3x3 grid represents various trees, but the last lower-right piece is missing. It seems to follow a scheme, which piece is the right one?",
+    "hint1_ita": "L’unico elemento che non segue uno schema e’ il colore del tronco.",
+    "hint2_ita": "Concentrati su tutti gli altri elementi: luci, la decorazione in cima e le palle di natale.",
+    "hint3_ita": "La soluzione e' il tassello C",
+    "hint1_eng": "The only element that does not follow the scheme is the color of the trunk",
+    "hint2_eng": "So, focus on the other elements: the lights, the decoration on the top and the Christmas balls.",
+    "hint3_eng": "The solution is the piece C.",
+    "solution_ita": "Bravo! Le luci, le decorazioni in cima e le palle di natale non si ripetono mai, sapendo questo ti basta osservare i primi due alberi della fila per dedurre come sara' il terzo.",
+	"solution_eng": "Good! The lights, the decorations on the top and the Christmas balls never repeat. So, you just need to observe the first two trees of the row to deduce how the third should be."
+  },
+   {
+    "number": 2,
+    "name": "Batteria",
+    "text_ita": "Accendendo questo macchinario e' possibile trovare la password per accedere al database dove l'aiutante di Babbo Natale ha salvato tutte le consegne da fare il 25 dicembre. Tuttavia non sembra esserci energia sufficiente per farlo funzionare, sai aiutarlo?",
+    "text_eng": "Turning on this machinery you can find the password to enter the database where Santa's assistant saved all the deliveries to do on the 25th December. However, there isn't enough energy to make it work, can you help him?",
+	"hint1_ita": "Hai una fonte di energia a cui collegare il macchinario?",
+    "hint2_ita": "La lettera A=65, B=66, C=67 e cosi' via fino a Z.",
+    "hint3_ita": "Hai provato a mettere in carica il cellulare? La password e' 4.",
+    "hint1_eng": "Do you have a source of energy to which connect the machinery?",
+    "hint2_eng": "The letter A=65, B=66, C=67 and so on until Z.",
+    "hint3_eng": "Have you tried to charge your phone? The password is 4.",
+    "solution_ita": "Dopo aver collegato il cellulare alla presa di corrente puoi osservare sul display il codice O-K. Ogni lettera partendo da A corrisponde a un numero, come faceva intendere la pergamena in alto a destra. La A=65, B=66, C=67 e cosi' via. In questo modo O=79 e K=75. 78-75=4. La password e' quindi 4.",
+	"solution_eng": "Once you have connected the phone to the outlet you can see on the display the code 0-K. Each letter from A correspond with a number, as the parchment on the top right suggests. A=65, B=66, C=67 and so on. At the same way O=79 and K=75. 78-75=4- The password is 4."
+  },
+  {
+    "number": 3,
+    "name": "Elfo",
+    "text_ita": "L’elfo del natale deve entrare nella casa di Babbo Natale per prendere le chiavi della slitta. Arrivato davanti alla porta, inserisce il numero nella sequenza, ma e' errato. Puoi aiutare l’elfo a ricordare il numero mancante, sapendo che la sequenza segue un preciso schema?",
+    "text_eng": "The Christmas elf must enter Santa's house to get the keys of the sleigh. Once reached the door, he inserts the number of the sequence, but it's wrong. Could you help the elf to remember the missing number, knowing that the sequence follows a precise scheme?",
+    "hint1_ita": "Hai provato a vederli come giorni?",
+    "hint2_ita": "Forse e' a cavallo tra due giorni",
+    "hint3_ita": "Il numero mancante e' 1",
+    "hint1_eng": "Have you tried to arrange them as if they were days?",
+    "hint2_eng": "It could be straddle two days",
+    "hint3_eng": "1 is the missing number",
+    "solution_ita": "Complimenti! Guarda attentamente i numeri: le prime due cifre (12) indicano Dicembre, la successiva coppia (31) il giorno. E poi si va avanti, 1 Gennaio, 2 Gennaio e infine 3 Gennaio.",
+	"solution_eng": "Great! Look carefully the numbers: the first two numbers (12) symbolize December, the following two (31) the day of the month. And so on: 1st of January, 2nd of January and finally 3rd of January."
+  },
+   {
+    "number": 4,
+    "name": "Pacchi",
+    "text_ita": "Babbo natale ha incaricato il suo aiutante di preparare un pacco regalo. Babbo tiene molto ai suoi regali e raramente affida un compito cosi' delicato ad altri, ma ogni volta che si trova costretto a farlo, consegna una lista dettagliatissima con tutte le specifiche che il pacco deve avere. Aiutiamo l’aiutante a ricoprire questa importante mansione senza commettere errori.",
+    "text_eng": "Santa entrusted his assistant to wrap a present. Santa really cares about presents and relies this task on other people rarely, but each time he has to do that, he gives a highly detailed list with all the characteristics the pack must have. Let's help the assistant to fulfill this important task without errors.",
+    "hint1_ita": "Credo che la corrente della casa non ci sia, cosa possiamo fare?",
+    "hint2_ita": "Delle volte per aver maggior chiarezza su un problema bisogna cambiare il punto di vista.",
+    "hint3_ita": "Clicca qui per la soluzione",
+    "hint1_eng": "I think that the electricity is missing, what can we do?",
+    "hint2_eng": "To better understand this problem you should try to change your point of view.",
+    "hint3_eng": "Tap here for the solution.",
+    "solution_ita": "Complimenti! Una volta fornita la corrente e posizionato il pacco al centro del tavolo, basta cambiare il colore del fiocco usando la lavagnetta e il colore della scatola con il pulsante sotto il tavolo nascosto dal fiocco. Ovviamente modificando la scotola giusta che si ottiene girando lo schermo.",
+	"solution_eng": "Congrats! Once the electricity is provided and the pack put at the centre of the table, you can change the color of the ribbon by using the sketchboard. Then, you can change the color of the box with the button under the table hidden by the ribbon. But you must modify the characteristic of the right pack, that you obtain by rotating your phone."
+  }
+]
