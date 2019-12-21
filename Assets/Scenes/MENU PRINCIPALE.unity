@@ -687,7 +687,7 @@ MonoBehaviour:
   bip: {fileID: 8300000, guid: 32f0181e0dde49940810aadf1b50cdc4, type: 3}
   corrente: {fileID: 8300000, guid: 49dcd0aaa40c06243a8fbb0d2b7a5084, type: 3}
   SONGS: 0
-  startSong: {fileID: 8300000, guid: 1b8573ff49e800c45869dd0a0edbf4cf, type: 3}
+  startSong: {fileID: 8300000, guid: 5ee5884c2bf89f94dbcc26b218df9161, type: 3}
   enigmaSong: {fileID: 8300000, guid: f89599ce9b327c44fb3607380948ba74, type: 3}
   solutionSong: {fileID: 8300000, guid: 03b766f7e72f59e4e8ae949d1350b1c3, type: 3}
   menuSong: {fileID: 8300000, guid: 1b8573ff49e800c45869dd0a0edbf4cf, type: 3}

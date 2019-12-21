@@ -22,6 +22,19 @@ public class GooglePlayServices
 
     public static bool loading = false;
 
+
+
+    /*ACHIVEMENT*/
+    public const string FIRST_STEP = "CgkIzqblrPINEAIQAg";
+    public const string LIGHT_POCKET = "CgkIzqblrPINEAIQBw";
+    public const string LEGGIANTE_POCKET = "CgkIzqblrPINEAIQCA";
+    public const string HEAVY_POCKET = "CgkIzqblrPINEAIQCQ";
+    public const string MADALINA = "CgkIzqblrPINEAIQCg";
+    public const string DARK_KNIGHT = "CgkIzqblrPINEAIQCw";
+    public const string ARTIST = "CgkIzqblrPINEAIQDA";
+    public const string XMAS = "CgkIzqblrPINEAIQDQ";
+
+
     public static bool Authenticated
     {
         get
@@ -243,7 +256,7 @@ public class GooglePlayServices
     }
 
 
-    public static void UnlockAchivement(ACHIVEMENT achivement)
+    public static void UnlockAchivement(string achivement)
     {
         if (!Authenticated)
         {
@@ -251,23 +264,17 @@ public class GooglePlayServices
             return;
         }
 
-        switch (achivement)
+        Social.ReportProgress(achivement, 100.0f, (bool success) =>
         {
-            case ACHIVEMENT.FIRST_STEP:
-                Social.ReportProgress("CgkIzqblrPINEAIQAg", 100.0f, (bool success) => {
-                    // handle success or failure
-                    if (success)
-                    {
-                        Debug.Log("Achivement unlocked!");
-                    }
-                    else
-                    {
-                        Debug.Log("Not succeded");
-                    }
-                });
-                break;
-        }
-
-
+            // handle success or failure
+            if (success)
+            {
+                Debug.Log("Achivement unlocked!");
+            }
+            else
+            {
+                Debug.Log("Not succeded");
+            }
+        });
     }
 }

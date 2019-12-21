@@ -44,7 +44,7 @@ public class EndLogo : MonoBehaviour
             selectLanguage.SetActive(false);
             background.SetActive(false);
             GameManager.instance.StartGame();
-            
+                       
         }
     }
 }

@@ -7,13 +7,14 @@ public class BenitoPack : MonoBehaviour
     public GameObject paccoVero;
     void Start()
     {
-        
+        Input.gyro.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.gyro.attitude.z >=140 && Input.gyro.attitude.z <= 220)
+        //Debug.Log(Input.gyro.attitude.eulerAngles);
+        if(Input.gyro.attitude.eulerAngles.z >=220 && Input.gyro.attitude.eulerAngles.z <= 360)
         {
             paccoVero.SetActive(true);
         }

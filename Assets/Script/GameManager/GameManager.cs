@@ -145,11 +145,38 @@ public class GameManager : MonoBehaviour
                     gameSaveData.lastSolved = lastSolved;
                 }
                 rightCheck = true;
+                //PRIMO ENIGMA -> UNLOCK FIRST STEP
+                if(indexEnigma == 1)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.FIRST_STEP);
+                }
+                //SCONFITTA MADALINA
+                if(indexEnigma == 15)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.MADALINA);
+                }
+                //SCONFITTO DARK KNIGHT
+                if (indexEnigma == 30)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.DARK_KNIGHT);
+                }
             }
             else
             {
                 rightCheck = false;
                 nWrongs++;
+                if(nWrongs >= 5)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.LIGHT_POCKET);
+                }
+                if(nWrongs >= 15)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.LEGGIANTE_POCKET);
+                }
+                if (nWrongs >= 30)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.HEAVY_POCKET);
+                }
                 gameSaveData.nWrongs = nWrongs;
             }
             checking = true;
@@ -241,6 +268,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        Debug.Log("Playing music..");
+        MixerAudio.instance.ChangeSong(MixerAudio.SONG_TYPE.SOLUTION, 0);
         MixerAudio.instance.ChangeSong(MixerAudio.SONG_TYPE.MAIN, 0);
         startVideo.enabled = true;
     }
@@ -300,8 +329,11 @@ public class GameManager : MonoBehaviour
         {
             if (indexScene == GameManager.instance.indexRight)
             {
-
                 GameManager.instance.rightCheck = true;
+                if(indexEnigma == 38)
+                {
+                    GooglePlayServices.UnlockAchivement(GooglePlayServices.XMAS);
+                }
             }
             else
             {

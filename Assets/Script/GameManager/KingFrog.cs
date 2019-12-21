@@ -46,9 +46,5 @@ namespace KingFrog
         GREEN
     }
 
-    public enum ACHIVEMENT
-    {
-        FIRST_STEP
-    }
 }
 
