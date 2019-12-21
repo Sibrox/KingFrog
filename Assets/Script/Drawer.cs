@@ -83,6 +83,8 @@ public class Drawer : MonoBehaviour
             GameObject newPainter;
             Vector2 pos;
 
+            GooglePlayServices.UnlockAchivement(GooglePlayServices.ARTIST);
+
             if (!buttonBlack.isUp)
             {
                 newPainter = GameObject.Instantiate(renderBlack);
