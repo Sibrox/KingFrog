@@ -161,6 +161,11 @@ public class GooglePlayServices
 
                 loading = false;
             }
+            else
+            {
+                loading = false;
+                GameManager.instance.SetSave();
+            }
         }
         else
         {
