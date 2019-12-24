@@ -417,6 +417,9 @@ MonoBehaviour:
   nilSprites:
   - {fileID: 21300000, guid: e2687c7e62cab954ab8f2de0d0b6e374, type: 3}
   - {fileID: 21300000, guid: f91e09a9df335094e8be64173e6f16af, type: 3}
+  sibroxSprites:
+  - {fileID: 21300000, guid: 7c7aa272c3a037a41b0bc4e745222504, type: 3}
+  - {fileID: 21300000, guid: 7c7aa272c3a037a41b0bc4e745222504, type: 3}
   nameDialog: {fileID: 4008350430068902282}
   portrait: {fileID: 167741130092441335}
   waitTime: 0.2
@@ -548,6 +551,7 @@ MonoBehaviour:
   charSentence: 
   dialogComponent: {fileID: 3468827096251912395}
   animationDialog: {fileID: 3370229518498623446}
+  changed: 0
 --- !u!1 &1874854920103099114
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,7 +951,11 @@ MonoBehaviour:
   up: {fileID: 0}
   upGold: {fileID: 0}
   downGold: {fileID: 0}
+  upRuna: {fileID: 0}
+  downRuna: {fileID: 0}
   isGold: 0
+  isRuna: 0
+  gameboy: {fileID: 0}
   isUp: 0
   text: {fileID: 0}
 --- !u!114 &4883826675475949914

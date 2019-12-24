@@ -53,6 +53,11 @@ public class MultipleDialog : MonoBehaviour
                             charSentence[i] = CHARACTER.NIL;
                             break;
                         }
+                    case "SB":
+                        {
+                            charSentence[i] = CHARACTER.SIBROX;
+                            break;
+                        }
                 }
                 sentencesITA[i] = dialogComplete[i].textITA;
                 sentencesENG[i] = dialogComplete[i].textENG;

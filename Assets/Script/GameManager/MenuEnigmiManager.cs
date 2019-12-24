@@ -30,6 +30,8 @@ public class MenuEnigmiManager : MonoBehaviour
 
     bool bog;
 
+    public EventManager mainMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -106,7 +108,7 @@ public class MenuEnigmiManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            popUpUscita.SetActive(true);
+            mainMenu.StartMain();
         }
 
         if (changeRight && menuScenes.transform.localPosition.x > WIDTH * (-1) * nScene)

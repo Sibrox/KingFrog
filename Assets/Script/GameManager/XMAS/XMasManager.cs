@@ -13,9 +13,11 @@ public class XMasManager : MonoBehaviour
     public List<bool> solved;
     Dictionary<string, Event> events;
 
-    public GameObject dialogUnlock;
+    public GameObject dialogUnlock,dialogEnd;
 
+    public int lastXmas;
 
+    public TextAsset textEnd;
 
     private void Awake()
     {
@@ -30,6 +32,7 @@ public class XMasManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lastXmas = 0;
         instance = this;
         DontDestroyOnLoad(gameObject);
         events = new Dictionary<string, Event>();
@@ -44,12 +47,15 @@ public class XMasManager : MonoBehaviour
         {
             if (solved[i])
             {
-                buttons[i].SetGold();
+                lastXmas++;
             }
         }
 
-        if (events["XMAS 2019"].unlocked) dialogUnlock.SetActive(false);
-        else
+        if (lastXmas == 4)
+        {
+            dialogEnd.SetActive(true);
+        }
+        else if(!events["XMAS 2019"].unlocked)
         {
             UnlockXmas();
         }
@@ -67,16 +73,15 @@ public class XMasManager : MonoBehaviour
 
     private void UpdateGold()
     {
-        int i = 0;
-        for (i = 0; i < 4 && solved[i]; i++) ;
-
-        for(int j = 0; j < i; j++)
+        for(int j = 0; j < lastXmas; j++)
         {
             buttons[j].SetGold();
             buttons[j].GetComponent<Button>().interactable = true;
         }
-
-        if (i < 4) buttons[i].gameObject.GetComponent<Button>().interactable = true;
+        if(lastXmas < 4)
+        {
+            buttons[lastXmas].GetComponent<Button>().interactable = true;
+        }
     }
 
     private void UnlockXmas()
@@ -89,5 +94,7 @@ public class XMasManager : MonoBehaviour
                 e.unlocked = true;
             }
         }
+        dialogUnlock.SetActive(true);
     }
+
 }

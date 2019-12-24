@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
 
     public bool migrationDone;
 
+    public int lastXmas;
+
     private void Awake()
     {
         TestSingleton();
@@ -55,7 +57,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         migrationDone = false;
-
+        lastXmas = 0;
         darkKnightStarted = true;
         indexStatus = indexStart;
         Input.multiTouchEnabled = false;
@@ -74,7 +76,7 @@ public class GameManager : MonoBehaviour
         TextAsset jsonTextFile = Resources.Load<TextAsset>("Text/Riddles");
         riddles = JsonHelper.getJsonArray<TextRiddle>(jsonTextFile.ToString());
 
-        TextAsset jsonTextFileXmas = Resources.Load<TextAsset>("Text/RiddlesXMas");
+        TextAsset jsonTextFileXmas = Resources.Load<TextAsset>("Text/RiddlesXMas Martina");
         xMasRiddle = JsonHelper.getJsonArray<TextRiddle>(jsonTextFileXmas.ToString());
 
     }
@@ -307,6 +309,7 @@ public class GameManager : MonoBehaviour
 
             //TODO: ELIMINARE VECCHIO SALVATAGGIO
             SaveSystem.DeleteDeprecatedSaving();
+            SetSave();
 
             migrationDone = true;
         }
@@ -410,6 +413,14 @@ public class GameManager : MonoBehaviour
         nWrongs = gameSaveData.nWrongs;
         indexEnigma = lastSolved;
         darkKnightStarted = gameSaveData.darkKnightStarted;
+
+        for(int i = 0; i< 4; i++)
+        {
+            if (gameSaveData.events[0].solved[i])
+            {
+                lastXmas++;
+            }
+        }
     }
 
 }

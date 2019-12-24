@@ -1,0 +1,47 @@
+[
+{
+  "character": "MD",
+  "textITA": "Non e' giusto! Vince sempre lui alla fine. ",
+  "textENG":  "Ah, it's not fair! They always win in the end!"
+},
+
+{
+  "character": "DK",
+  "textITA": "Calmati, riusciremo la prossima volta a sconfiggerlo.",
+  "textENG":  "Patience. We'll get them next time."
+},
+
+{
+  "character": "MD",
+  "textITA": "Non credo ci sara' una prossima volta. Lo trasformero' in una rana!",
+  "textENG":  "There isn't going to be a next time! I'll turn them into a frog right now! It took you some time to get here."
+},
+
+{
+  "character": "MD",
+  "textITA": "Bidibee-bodibee-boo! Trasformalo in rana e non farmelo vedere pi... ",
+  "textENG":  "Bidibee-bodibee-boo! A frog's form for yo-"
+},
+
+{
+  "character": "SB",
+  "textITA": "Madalina! Sempre la solita. Se non la smetti ti lincenziamo. Sapevi fin dall'inizio quali erano le regole.",
+  "textENG":  "Stop it, Madalina! One more time and you're getting kicked out! You know full well the rules!"
+},
+{
+  "character": "SB",
+  "textITA": "Adesso augurate entrambi buon Natale al nostro ospite e tornate alle vostre mansioni.",
+  "textENG":  "Now give our guest your wishes and then back to your posts!"
+},
+
+{
+  "character": "MD",
+  "textITA": "Pff! Buon Natale...",
+  "textENG":  "Ugh, fine. Merry Christmas..."
+},
+{
+  "character": "DK",
+  "textITA": "Complimenti giocatore! Buon Natale e felice anno nuovo!",
+  "textENG":  "Well, you've done it again, player! Merry Christmas, and an happy New Year!"
+}
+]

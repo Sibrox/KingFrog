@@ -20,6 +20,7 @@ public class AnimationDialog : MonoBehaviour
     public Sprite[] darkKnightSprites;
     public Sprite[] bogSprites;
     public Sprite[] nilSprites;
+    public Sprite[] sibroxSprites;
 
     public Text nameDialog;
 
@@ -45,7 +46,8 @@ public class AnimationDialog : MonoBehaviour
             [CHARACTER.MADALINA] = madalinaSprites,
             [CHARACTER.DARK_KNIGHT] = darkKnightSprites,
             [CHARACTER.BOG] = bogSprites,
-            [CHARACTER.NIL] = nilSprites
+            [CHARACTER.NIL] = nilSprites,
+            [CHARACTER.SIBROX] = sibroxSprites
         };
 
         namesITA = new Dictionary<CHARACTER, string>
@@ -53,7 +55,8 @@ public class AnimationDialog : MonoBehaviour
             [CHARACTER.MADALINA] = "Madalina",
             [CHARACTER.DARK_KNIGHT] = "Dark Knight",
             [CHARACTER.BOG] = "Bog",
-            [CHARACTER.NIL] = "Nil"
+            [CHARACTER.NIL] = "Nil",
+            [CHARACTER.SIBROX] = "Sibrox Co."
         };
 
         ChangeCharacter(character);

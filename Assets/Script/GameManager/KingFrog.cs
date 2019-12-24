@@ -11,7 +11,8 @@ namespace KingFrog
         MADALINA,
         DARK_KNIGHT,
         BOG,
-        NIL
+        NIL,
+        SIBROX
     };
 
     public enum LANG

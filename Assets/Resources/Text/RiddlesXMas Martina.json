@@ -2,7 +2,7 @@
   {
     "number": 1,
     "name": "Alberi",
-    "text_ita": "Una strana griglia 3x3 raffigura diversi alberi, purtroppo manca l’ultimo tassello in basso a destra. Sembra seguire uno schema, quale tassello e’ quello giusto?",
+    "text_ita": "Una strana griglia 3x3 raffigura diversi alberi. Purtroppo manca l’ultimo tassello in basso a destra. Sembra seguire uno schema: quale tassello e’ quello giusto?",
     "text_eng": "A weird 3x3 grid represents various trees, but the last lower-right piece is missing. It seems to follow a scheme, which piece is the right one?",
     "hint1_ita": "L’unico elemento che non segue uno schema e’ il colore del tronco.",
     "hint2_ita": "Concentrati su tutti gli altri elementi: luci, la decorazione in cima e le palle di natale.",
@@ -10,14 +10,14 @@
     "hint1_eng": "The only element that does not follow the scheme is the color of the trunk",
     "hint2_eng": "So, focus on the other elements: the lights, the decoration on the top and the Christmas balls.",
     "hint3_eng": "The solution is the piece C.",
-    "solution_ita": "Bravo! Le luci, le decorazioni in cima e le palle di natale non si ripetono mai, sapendo questo ti basta osservare i primi due alberi della fila per dedurre come sara' il terzo.",
+    "solution_ita": "Bravo! Le luci, le decorazioni in cima all'albero e le palle di natale non si ripetono mai. Sapendo questo ti basta osservare i primi due alberi della fila per dedurre come sara' il terzo.",
 	"solution_eng": "Good! The lights, the decorations on the top and the Christmas balls never repeat. So, you just need to observe the first two trees of the row to deduce how the third should be."
   },
    {
     "number": 2,
     "name": "Batteria",
-    "text_ita": "Accendendo questo macchinario e' possibile trovare la password per accedere al database dove l'aiutante di Babbo Natale ha salvato tutte le consegne da fare il 25 dicembre. Tuttavia non sembra esserci energia sufficiente per farlo funzionare, sai aiutarlo?",
-    "text_eng": "Turning on this machinery you can find the password to enter the database where Santa's assistant saved all the deliveries to do on the 25th December. However, there isn't enough energy to make it work, can you help him?",
+    "text_ita": "Accendendo questo macchinario e' possibile trovare una password. La password serve per accedere al database dove l'aiutante di Babbo Natale ha salvato tutte le consegne da fare il 25 dicembre. Tuttavia non sembra esserci energia sufficiente per farlo funzionare, sai aiutarlo?",
+    "text_eng": "Turning on this machinery you can find a password. The password is useful to enter in the database where Santa's assistant saved all the deliveries to do on the 25th December. However, there isn't enough energy to make it work, can you help him?",
 	"hint1_ita": "Hai una fonte di energia a cui collegare il macchinario?",
     "hint2_ita": "La lettera A=65, B=66, C=67 e cosi' via fino a Z.",
     "hint3_ita": "Hai provato a mettere in carica il cellulare? La password e' 4.",
@@ -47,12 +47,12 @@
     "text_ita": "Babbo natale ha incaricato il suo aiutante di preparare un pacco regalo. Babbo tiene molto ai suoi regali e raramente affida un compito cosi' delicato ad altri, ma ogni volta che si trova costretto a farlo, consegna una lista dettagliatissima con tutte le specifiche che il pacco deve avere. Aiutiamo l’aiutante a ricoprire questa importante mansione senza commettere errori.",
     "text_eng": "Santa entrusted his assistant to wrap a present. Santa really cares about presents and relies this task on other people rarely, but each time he has to do that, he gives a highly detailed list with all the characteristics the pack must have. Let's help the assistant to fulfill this important task without errors.",
     "hint1_ita": "Credo che la corrente della casa non ci sia, cosa possiamo fare?",
-    "hint2_ita": "Delle volte per aver maggior chiarezza su un problema bisogna cambiare il punto di vista.",
+    "hint2_ita": "Scuoti il telefono.",
     "hint3_ita": "Clicca qui per la soluzione",
     "hint1_eng": "I think that the electricity is missing, what can we do?",
-    "hint2_eng": "To better understand this problem you should try to change your point of view.",
+    "hint2_eng": "Shake your smartphone.",
     "hint3_eng": "Tap here for the solution.",
-    "solution_ita": "Complimenti! Una volta fornita la corrente e posizionato il pacco al centro del tavolo, basta cambiare il colore del fiocco usando la lavagnetta e il colore della scatola con il pulsante sotto il tavolo nascosto dal fiocco. Ovviamente modificando la scotola giusta che si ottiene girando lo schermo.",
-	"solution_eng": "Congrats! Once the electricity is provided and the pack put at the centre of the table, you can change the color of the ribbon by using the sketchboard. Then, you can change the color of the box with the button under the table hidden by the ribbon. But you must modify the characteristic of the right pack, that you obtain by rotating your phone."
+    "solution_ita": "Complimenti! Una volta fornita la corrente e posizionato il pacco al centro del tavolo, basta cambiare il colore del fiocco usando la lavagnetta e il colore della scatola con il pulsante sotto il tavolo nascosto dal fiocco. Ovviamente modificando la scatola giusta che si ottiene scuotendo il telefono.",
+	"solution_eng": "Congrats! Once the electricity is provided and the pack put at the centre of the table, you can change the color of the ribbon by using the sketchboard. Then, you can change the color of the box with the button under the table hidden by the ribbon. But you must modify the characteristic of the right pack, that you obtain by shaking the phone."
   }
 ]
